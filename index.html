@@ -3,11 +3,12 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="light" name="color-scheme"/>
-<title>かんじの たからばこ｜部品の形チェック版</title>
+<title>かんじの たからばこ｜構造チェック・書写ヒント版</title>
 <style> :root{--ink:#243a48;--muted:#566b77;--bg:#f4f7f3;--teal:#146b63;--green:#e7f3ed;--orange:#974810;--cream:#fff1df;--line:#d4dfd9} *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"BIZ UDPGothic","Yu Gothic",Meiryo,sans-serif;line-height:1.7}button,input,select{font:inherit}button,select{cursor:pointer}button{border:0;border-radius:14px;padding:13px 22px;font-weight:700;background:#fff;color:var(--ink);min-height:48px;line-height:1.5}button:hover:not(:disabled){filter:brightness(.95)}button:disabled{cursor:not-allowed;opacity:.45}:focus-visible{outline:3px solid #3867c4;outline-offset:4px}[hidden]{display:none!important} .wrap{max-width:920px;margin:auto;padding:24px 22px 45px}header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px}.mark{display:grid;place-items:center;background:var(--teal);color:white;border-radius:14px;width:44px;height:44px;font-family:serif;font-size:26px}.brand strong{display:block;font-size:18px;letter-spacing:.04em}.brand small{display:block;font-size:12px;color:var(--muted)}.tag,.eyebrow{font-size:12px;font-weight:bold;letter-spacing:.08em;color:var(--teal)}.tag{background:var(--green);padding:7px 12px;border-radius:20px} h1,h2,p{margin-top:0}h1{font-size:clamp(26px,4.8vw,38px);line-height:1.5;letter-spacing:.03em;margin-bottom:12px}h2{font-size:23px;margin-bottom:12px}.intro{padding:16px 5px 10px}.intro p{color:var(--muted)}.card{background:white;border:1px solid var(--line);border-radius:24px;padding:26px;margin-bottom:20px;box-shadow:0 10px 32px #29483d0a}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 24px}.step{font-size:14px;background:#edf2ed;padding:13px;border-radius:14px}.step b{color:var(--teal);display:block;margin-bottom:3px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}.section-head h2{font-size:18px;margin:0} .ranges{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.range{position:relative;cursor:pointer;display:block}.range input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}.range span{display:flex;flex-direction:column;align-items:center;border:2px solid var(--line);border-radius:16px;padding:12px 6px;pointer-events:none}.range b{font-size:25px}.range small{font-size:12px}.range input:checked+span{background:var(--green);border-color:var(--teal);color:var(--teal)}.range input:checked+span small::before{content:"✓ "}.range input:focus-visible+span{outline:3px solid #3867c4;outline-offset:3px}.options{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:20px 0}.options label{display:flex;gap:8px;align-items:center}.options input{accent-color:var(--teal);width:20px;height:20px}select{border:1px solid var(--line);border-radius:10px;background:white;padding:9px;max-width:100%} .primary{background:var(--teal);color:white}.outline{border:1px solid var(--line);background:white}.orange{background:var(--cream);color:var(--orange);border:1px solid #e6c4a4}.wide{width:100%}.text-btn{background:transparent;font-size:14px;padding:8px 12px;min-height:40px;text-decoration:underline;text-underline-offset:4px}.hint{font-size:13px;color:var(--muted);margin:10px 0 0}.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.row>*{flex:1}.resume{display:flex;gap:14px;align-items:center;justify-content:space-between;background:var(--green);border:1px solid #b5d3c4;padding:18px 22px;border-radius:18px;margin-bottom:20px}.resume p{margin:0;font-size:14px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0 18px}.stat{border-radius:16px;background:#f4f6f4;text-align:center;padding:12px 8px}.stat b{display:block;font-size:29px;line-height:1.4}.stat span{font-size:13px}.stat.good{background:var(--green);color:var(--teal)}.stat.again{background:var(--cream);color:var(--orange)}details{font-size:14px}summary{cursor:pointer;font-weight:bold;min-height:40px;padding:6px 0}details p,details li{color:var(--muted)}details ul{padding-left:22px} .topline{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}.topline strong{font-size:16px}progress{width:100%;height:10px;border:0;border-radius:8px;overflow:hidden;background:#dfe8e0;display:block;margin:0 0 18px}progress::-webkit-progress-bar{background:#dfe8e0}progress::-webkit-progress-value{background:var(--teal);border-radius:8px}progress::-moz-progress-bar{background:var(--teal)}.q-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.pill{font-size:12px;padding:4px 10px;border-radius:9px;background:#eff3f0;color:var(--muted);font-weight:bold}.instruction{color:var(--muted);font-size:14px;margin:15px 0 10px}.sentence{font-size:clamp(24px,4.5vw,34px);line-height:2.35;font-weight:600;overflow-wrap:anywhere;margin:8px 0 18px}.reading{display:inline-block;color:var(--teal);background:var(--green);border-bottom:3px solid var(--teal);border-radius:9px 9px 0 0;padding:0 12px;margin:0 4px;line-height:1.75}rt{font-size:.42em;font-weight:400}.write-head{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px;margin-bottom:8px;color:var(--muted)}.write-head button{font-size:12px;padding:7px 12px;min-height:36px}.writing{border:1px solid #b6c7bf;border-radius:14px;overflow:hidden;background:white}canvas{display:block;width:100%;height:180px;touch-action:none;cursor:crosshair}.answer-area{background:#f4f7f3;border-radius:16px;padding:16px 20px;margin-top:18px}.answer-area small{font-weight:bold;color:var(--teal)}.answer-text{font-family:"UD Digi Kyokasho N-R","Yu Kyokasho","BIZ UDPMincho","Yu Mincho",serif;font-size:clamp(40px,7vw,58px);line-height:1.6;letter-spacing:.12em;overflow-wrap:anywhere}.answer-area p{margin:3px 0 0;font-size:13px;color:var(--muted)}.actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.actions button{font-size:18px}.reveal-actions{display:flex;gap:10px;align-items:center;margin-top:18px}.reveal-actions .primary{flex:1;font-size:18px}.bottomline{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;color:var(--muted)}.bottomline p{margin:0} .result-title{text-align:center;padding:10px 0}.result-symbol{font-size:35px;color:var(--teal);background:var(--green);width:72px;height:72px;border-radius:50%;display:grid;place-items:center;margin:0 auto 16px}.result-title p{color:var(--muted);margin-bottom:0}.result-list{list-style:none;margin:12px 0 0;padding:0;max-height:360px;overflow:auto}.result-list li{padding:14px 4px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:center}.result-list strong{font-size:23px;font-family:"Yu Mincho",serif}.result-list small{display:block;color:var(--muted);font-size:12px}.retry-label{color:var(--orange);font-size:12px;white-space:nowrap}.notice{padding:12px 16px;background:var(--cream);color:var(--orange);border:1px solid #dfc2a6;border-radius:12px;margin-bottom:18px;font-size:13px}footer{color:var(--muted);font-size:12px;text-align:center;margin-top:24px}dialog{border:1px solid var(--line);border-radius:22px;max-width:440px;width:calc(100% - 32px);padding:26px;color:var(--ink)}dialog::backdrop{background:#1c302c80}dialog h2{font-size:20px}dialog p{font-size:14px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0} @media(max-width:600px){.wrap{padding:16px 14px 28px}header{margin-bottom:16px}.brand strong{font-size:15px}.brand small{font-size:10px}.tag{font-size:11px;padding:5px 9px}.card{padding:19px 16px;border-radius:20px}.steps{gap:7px}.step{padding:10px;font-size:12px}.ranges{gap:6px}.range b{font-size:23px}.range span{padding:10px 3px}.range small{font-size:10px}.resume{padding:14px;align-items:stretch;flex-direction:column}.sentence{margin-bottom:14px}.actions button{padding:14px 8px;font-size:17px}.reveal-actions{flex-direction:column;align-items:stretch}.options{gap:12px;font-size:14px}.bottomline{align-items:flex-start}.write-head{font-size:12px}.write-head button{padding:6px 8px}canvas{height:165px}} .mode-switch{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}.mode-switch button{border:2px solid var(--line);background:white;text-align:left;padding:14px 16px}.mode-switch button[aria-pressed="true"]{border-color:var(--teal);background:var(--green);color:var(--teal)}.mode-switch small{display:block;font-weight:normal;font-size:12px;margin-top:4px}.study-mode{margin:16px 0 8px}.study-mode button{text-align:center;padding:10px}.sort-note{padding:13px 16px;background:var(--green);border-radius:12px;color:var(--teal);font-size:14px;margin-bottom:16px}.review-choice{margin:18px 0 10px}.review-choice button{margin-top:10px}@media(max-width:420px){.mode-switch button{font-size:14px;padding:12px 10px}.actions button{font-size:15px}} #study,#study *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none} .writing,#canvas{touch-action:none;overscroll-behavior:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-user-drag:none} #canvas{-webkit-tap-highlight-color:transparent} .online-box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 20px;margin-bottom:20px}.online-box p{margin:6px 0;font-size:13px}.asset-status{font-size:13px;font-weight:bold;background:#fff1df;color:#974810;padding:6px 10px;border-radius:9px;display:inline-block}.asset-status.ready{background:var(--green);color:var(--teal)}.online-box .topline{flex-wrap:wrap}.online-box pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;max-height:220px;overflow:auto} #characterSlots{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.char-slot{border:2px solid var(--line);padding:8px 14px}.char-slot[aria-pressed="true"]{background:var(--green);border-color:var(--teal);color:var(--teal)} .writing{width:100%;margin:0 auto}#canvas{width:100%;height:auto;aspect-ratio:4/1}#characterSlots,#nextChar{display:none!important}.write-head{flex-wrap:wrap}.auto-tools{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}.auto-tools button{flex:1}.auto-result{margin:18px 0;padding:18px;border:2px solid #afcdbf;border-radius:16px;background:#f4faf6}.candidate-row{margin:12px 0;display:flex;align-items:center;gap:6px;flex-wrap:wrap}.candidate{padding:5px 12px;min-width:44px;font-size:24px;border:2px solid var(--line)}.candidate[aria-pressed="true"]{border-color:var(--teal);background:var(--green)}#modelGlyphs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}#modelGlyphs svg{width:104px;height:104px;background:white;border:1px solid var(--line);border-radius:10px}.missing-glyph{font-size:16px;background:var(--cream);padding:12px}.answer-text{font-size:24px;letter-spacing:.05em}.bridge-box{position:absolute;left:0;top:0;width:256px;height:256px;opacity:0;pointer-events:none;z-index:-100;overflow:hidden}.bridge-box canvas{width:256px!important;height:256px!important;aspect-ratio:auto}.license-copy{font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere} .mode-switch button{position:relative;font-size:19px;min-height:64px;border-width:3px;text-align:center} .mode-switch button[aria-pressed="true"]{background:#146b63!important;color:#fff!important;border-color:#146b63!important;box-shadow:0 3px 0 #0b4943} #homeModeSummary{text-align:center;color:var(--teal);font-weight:700;margin:8px 0 0;font-size:16px} #connectionDetails{margin:16px 0}.online-box{margin:0;border:0;padding:6px 0;box-shadow:none} body[data-view="study"] .wrap{max-width:1000px;padding:10px 20px 12px} body[data-view="study"] .wrap>header,body[data-view="study"] .wrap>footer,body[data-view="study"] #connectionDetails,body[data-view="study"] #licenseDetails,body[data-view="study"] #storageWarning{display:none!important} #study .topline{height:48px;margin:0 0 6px;gap:8px;display:grid;grid-template-columns:1fr auto 1fr} #study .study-nav{display:flex;align-items:center;gap:6px;justify-content:flex-end} #study .topline button{font-size:16px;min-height:44px;padding:8px 12px;white-space:nowrap;text-decoration:none} #study #backBtn{justify-self:start}#study #progressText{font-size:17px;text-align:center} #study #progress{height:5px;margin:0 0 8px} #study>.card{padding:12px 18px 14px;margin:0;border-radius:20px;box-shadow:none} #study .sentence{font-size:clamp(26px,3.7vw,36px);line-height:1.9;min-height:78px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;margin:0 0 6px;gap:0;font-weight:600;text-align:center} #study .reading{line-height:1.65;padding:0 10px} #study .q-meta,#study .instruction,#study #sortNote,#study #recognitionHelp,#study #characterSlots,#study #gradeHint,#study .bottomline,#study #answerHint,#study #modelCaption,#study #answer{display:none!important} #study #writingPanel>.hint,#study .write-head>span:not(#slotCaption),#study .auto-tools{display:none!important} #study .write-head{height:44px;flex-wrap:nowrap;margin:0 0 6px;justify-content:space-between;gap:8px} #study .write-head button{min-height:42px;padding:8px 14px;font-size:16px;white-space:nowrap} #study #slotCaption{color:var(--muted);font-size:16px;font-weight:500;margin:0} #study .writing{width:min(100%,880px);margin:0 auto;border-radius:10px;border-color:#9caf9f} #study #canvas{width:100%;height:auto;aspect-ratio:4/1} #reviewShelf{min-height:132px;display:flex;flex-direction:column;justify-content:center;gap:4px;margin:8px 0;position:relative} #idlePrompt{font-size:19px;text-align:center;color:#677c70;margin:0} #study[data-inking="true"] #idlePrompt{visibility:hidden} #study #autoResult{border:0;background:transparent;padding:0;margin:0;text-align:center;line-height:1.5;font-size:16px} #study #autoMessage{font-size:17px;font-weight:600;display:block;overflow-wrap:anywhere} #study .answer-area{padding:0;margin:0;background:transparent;text-align:center} #study .answer-area>small{display:none} #study #modelGlyphs{justify-content:center;gap:8px;margin:2px 0} #study #modelGlyphs svg{width:80px;height:80px;border-color:#c0d3c7} #study .missing-glyph{font-size:27px;padding:9px 12px;min-width:62px} #study #glyphFallbackNote{font-size:14px;color:var(--orange);margin:0;text-align:center} #candidateAdjust{font-size:15px;padding:7px 12px;min-height:38px;align-self:center;background:transparent;color:var(--teal);text-decoration:underline;text-underline-offset:3px} #actionDock{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:stretch;min-height:56px;margin-top:4px} #actionDock button{font-size:19px;min-height:54px;padding:12px 10px;line-height:1.35} #actionDock #revealActions,#actionDock #gradeActions,#actionDock #autoConfirmBar{display:contents} #actionDock #unknownBtn{display:none!important} #study[data-mode="write"][data-phase="write"] #autoCheckBtn{grid-column:span 2} #study[data-mode="write"][data-phase="write"] #revealBtn{font-size:17px;border:1px solid var(--line);text-decoration:none} #study[data-mode="sort"][data-phase="write"] #revealBtn{font-size:16px;border:1px solid var(--line);text-decoration:none} #study[data-mode="sort"] #reviewShelf{min-height:200px} #study[data-mode="sort"] #modelGlyphs svg{width:100px;height:100px} #study[data-mode="sort"][data-phase="review"] #gradeActions button{grid-column:auto} #study[data-mode="sort"][data-phase="review"] #actionDock{grid-template-columns:1fr 1fr} #study[data-checking="true"] #autoCheckBtn{opacity:.7} #studyOptions,#candidateDialog{max-width:620px;width:calc(100% - 32px);max-height:calc(100dvh - 32px);overflow:auto;padding:24px} .dialog-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.dialog-head h2{margin:0;font-size:22px}.dialog-head button{border:1px solid var(--line);min-height:44px;padding:8px 16px} #studyOptions p{font-size:16px;margin:10px 0}#studyOptions .mode-switch{margin:16px 0} #candidateDialog #candidateRows{display:grid;grid-template-columns:1fr 1fr;gap:12px} #candidateDialog .candidate-row{margin:0;border:1px solid var(--line);border-radius:14px;padding:12px;gap:6px;justify-content:center} #candidateDialog .candidate-row>span{width:100%;font-size:16px} #candidateDialog .candidate{font-size:27px;min-width:52px;min-height:52px;padding:6px 10px} #candidateDialog .candidate[aria-pressed="true"]{background:var(--teal);color:white;border-color:var(--teal)} #candidateDialog #autoCaution{font-size:14px;margin-top:18px} #focusConnection{padding:10px 12px;border-radius:12px;background:var(--green);font-size:16px} @media(min-width:700px){#study .writing{max-width:min(880px,calc((100svh - 390px)*4));max-width:min(880px,calc((100dvh - 390px)*4))}} @media(max-width:699px){body[data-view="study"] .wrap{padding:6px 10px 10px}#study>.card{padding:8px 10px 12px}#study .topline button{padding:8px;font-size:14px}#study .topline{gap:4px}#study .sentence{font-size:26px;min-height:88px}#study .write-head button{font-size:14px;padding:8px 10px}#study #slotCaption{font-size:14px}#study #modelGlyphs{gap:4px}#study #modelGlyphs svg{width:66px;height:66px}#actionDock{gap:6px}#actionDock button{font-size:16px;padding:12px 6px}#reviewShelf{min-height:126px}#candidateDialog #candidateRows{grid-template-columns:1fr}#study[data-mode="sort"] #modelGlyphs svg{width:70px;height:70px}} @media(min-width:700px) and (max-height:580px){#study .sentence{min-height:62px;font-size:28px;line-height:1.7}#study>.card{padding-top:6px}#reviewShelf{min-height:108px;margin:4px 0}#study #modelGlyphs svg{width:62px;height:62px}#study .writing{max-width:min(800px,calc((100dvh - 340px)*4))}#actionDock button{min-height:48px;padding:10px 8px}#study .topline{height:44px}#study #progress{margin-bottom:4px}} body[data-view="study"] .wrap{padding-top:8px} #study .topline{height:44px;margin-bottom:4px} #study #progress{margin-bottom:6px} #study>.card{padding-top:10px;padding-bottom:12px} #study .sentence{min-height:68px;margin-bottom:4px} #study .write-head{height:42px;margin-bottom:4px} #reviewShelf{min-height:120px;margin:6px 0} #study #autoResult{display:flex;align-items:center;justify-content:center;gap:10px;min-height:34px} #study #autoMessage{flex:0 1 auto;font-size:17px} #candidateAdjust{white-space:nowrap;min-height:38px;padding:6px 8px;font-size:14px;flex:0 0 auto} #study #modelGlyphs svg{width:70px;height:70px} #actionDock{min-height:52px;margin-top:2px} #actionDock button{min-height:52px;padding:10px} @media(min-width:700px){#study .writing{max-width:min(880px,max(480px,calc((100svh - 420px)*4)));max-width:min(880px,max(480px,calc((100dvh - 420px)*4)))}} @media(max-width:699px){#study .sentence{min-height:80px}#reviewShelf{min-height:128px}#study #modelGlyphs svg{width:62px;height:62px}#study #autoMessage{font-size:15px}#candidateAdjust{font-size:13px}#actionDock button{font-size:16px;padding:10px 6px}} #strictDialog{max-width:800px;width:calc(100% - 24px);max-height:calc(100dvh - 24px);overflow:auto;padding:22px} #strictDialog .dialog-head{position:sticky;top:-22px;background:white;padding:12px 0;z-index:1} .strict-character{border-top:1px solid var(--line);padding:16px 0}.strict-character h3{font-size:24px;margin:0 0 10px}.strict-diagrams{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:center}.strict-diagrams svg{width:100%;max-width:220px;height:auto;border:1px solid var(--line);background:#fcfdfb;border-radius:12px}.strict-diagrams p{margin:0 0 8px;font-weight:700}.strict-checks{padding-left:20px;font-size:16px}.strict-checks li{margin:7px 0}.strict-review{color:#974810}.strict-ok{color:#146b63}.stroke-stepper{border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center}.stroke-stepper p{font-size:16px}.stroke-stepper button{border:1px solid var(--line);margin:0 5px}.strict-limit{font-size:14px;color:var(--muted)}#strictDetailsBtn{display:none!important}#candidateAdjust{display:none!important}#study #autoMessage{font-size:16px;line-height:1.4} #reviewChoiceNote{text-align:center;font-size:16px;margin:0;color:var(--muted)} #reviewShelf{min-height:158px}#manualChoiceBtn{align-self:center;min-height:38px;font-size:15px;padding:6px 12px;background:transparent;color:var(--teal);text-decoration:underline;text-underline-offset:3px} #actionDock #writeAgainBtn{font-size:16px}#actionDock #commitAuto{font-size:18px}#selfAgainBtn{font-size:17px!important} #study .writing{max-width:min(880px,max(480px,calc((100dvh - 455px)*4)))} .next-goal{background:#e7f3ed;border-radius:14px;padding:16px;color:#165b4e;font-size:19px;line-height:1.8} .detail-decisions{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:sticky;bottom:-22px;background:white;padding:14px 0}.detail-decisions button{font-size:18px;min-height:52px} #strictDialog details{font-size:14px;margin:12px 0}#strictDialog details summary{color:var(--muted)} @media(max-width:699px){#reviewShelf{min-height:160px}#reviewChoiceNote{font-size:14px}#actionDock #commitAuto,#selfAgainBtn{font-size:15px!important}#actionDock #writeAgainBtn{font-size:14px}.detail-decisions button{font-size:16px}} #actionDock{grid-template-columns:repeat(3,minmax(0,1fr))!important}#study #autoCheckBtn{grid-column:auto!important;background:#fff!important;color:var(--teal)!important;border:2px solid var(--teal)}#study #revealBtn,#study #unknownBtn,#study #manualChoiceBtn,#study #reviewChoiceNote,#study #autoResult,#study #writeAgainBtn{display:none!important}#reviewShelf{min-height:46px!important;margin:6px 0!important}#study #idlePrompt{font-size:17px}#study .writing{max-width:min(880px,max(480px,calc((100dvh - 345px)*4)))}#actionDock button{font-size:19px!important}#strictDialog .strict-diagrams svg{width:100%;max-width:260px;height:auto}#strictDialog .next-goal{font-size:21px;line-height:1.6}#strictDialog .stroke-stepper svg{width:220px;max-width:100%;height:auto}.advice-answer{font-size:30px;text-align:center}.strict-character details{margin-top:12px}@media(max-width:699px){#actionDock button{font-size:16px!important;padding:12px 5px}#study .writing{max-width:100%}}
 #study #revealBtn{display:inline-block!important;font-size:17px;padding:9px 20px;min-height:44px;color:var(--teal);border:2px solid var(--teal);background:#fff;text-decoration:none}
 .inline-answer-tools{text-align:center;margin:4px 0}#study #answerArea{margin:8px 0;padding:10px;background:#edf5ef;border-radius:12px}#study #answerArea>small{display:block;font-size:15px}#study #answer{display:block!important;font-size:32px;line-height:1.5;margin:4px 0}#study #answer[hidden]{display:none!important}#study #modelGlyphs{display:flex;justify-content:center;gap:6px;margin:4px 0}#study #modelGlyphs svg{width:76px;height:76px}#study #glyphFallbackNote{font-size:13px;margin:4px 0;color:var(--orange)}#study .writing{max-width:min(880px,max(480px,calc((100dvh - 455px)*4)))}
 @media(max-width:699px){#study .writing{max-width:100%}#study #modelGlyphs svg{width:60px;height:60px}#study #revealBtn{font-size:16px}}
+.finding-choice{display:block;text-align:left;width:100%;border:1px solid var(--line);margin:8px 0;font-size:15px}.finding-choice[aria-pressed="true"]{background:var(--green);border-color:var(--teal)}.advice-category{font-size:14px;color:var(--muted)}.advice-setting{display:flex;gap:10px;align-items:center;font-size:16px}.advice-setting input{width:22px;height:22px}.policy-table{border-collapse:collapse;width:100%;font-size:13px}.policy-table td,.policy-table th{border:1px solid var(--line);padding:8px;vertical-align:top}body[data-view="study"] #checkPolicy{display:none}
 </style>
 </head>
 <body><div class="wrap">
@@ -20,7 +21,7 @@
 <div class="resume" hidden="" id="resumeBox"><div><strong>つづきから できるよ</strong><p id="resumeInfo"></p></div><button class="primary" id="resumeBtn">つづきを やる →</button></div>
 <section aria-labelledby="rangeTitle" class="card"><div class="section-head"><h2 id="rangeTitle">れんしゅうする ところ</h2><button class="text-btn" id="selectAll">ぜんぶ えらぶ</button></div><div class="ranges" id="ranges"></div><p style="margin:20px 0 4px;font-weight:bold">やりかたを えらぼう</p><div aria-label="れんしゅうのやりかた" class="mode-switch" role="group"><button aria-pressed="true" id="homeSortMode">見るだけで しわけ<small>きほんのモード ・ 書かなくて OK</small></button><button aria-pressed="false" id="homeWriteMode">書いて れんしゅう<small>紙や画面に 書いてたしかめる</small></button></div><p aria-live="polite" id="homeModeSummary"></p><div class="options"><label>もんだいの数 <select id="limit"><option value="all">えらんだところを ぜんぶ</option><option value="10">10もんずつ</option><option value="20">20もんずつ</option></select></label><label><input id="shuffle" type="checkbox"/>じゅんばんを まぜる</label></div><button class="primary wide" id="startBtn">はじめる →</button><p class="hint" id="selectionInfo"></p></section>
 <section aria-labelledby="recordTitle" class="card"><div class="section-head"><h2 id="recordTitle">これまでの きろく</h2><span class="hint" style="margin:0">全100もん</span></div><div class="stats"><div class="stat good"><b id="masteredCount">0</b><span>書ける</span></div><div class="stat again"><b id="reviewCount">0</b><span>ふごうかく</span></div><div class="stat"><b id="newCount">100</b><span>まだ</span></div></div><button class="orange wide" id="homeReview">「ふごうかく」だけ れんしゅう →</button><p class="hint">ここからは、41〜45ぜんぶの「ふごうかく」をれんしゅうするよ。</p></section>
-<details class="card" id="connectionDetails"><summary>接続の状態・くわしい設定</summary><section aria-label="ネット接続と準備の状態" class="online-box"><div class="topline"><strong>お手本の接続状態</strong><button class="outline" id="retryOnline">お手本を再読込</button></div><div class="row"><span class="asset-status" id="engineStatus" role="status">認識の準備中…</span><span class="asset-status" id="glyphStatus" role="status">お手本は必要なときに取得</span></div><p id="networkHint">起動時に認識辞書とお手本を取得します。準備中でも見るだけ・自己判定は使えます。</p><details><summary>接続の記録</summary><pre id="onlineLog"></pre><p>端末・Canvaでの表示と助言精度は実機未検証です。</p></details></section></details><details class="card"><summary>先生・おうちの方へ</summary><p>41〜45の全100問。基本は見るだけの仕分け。書くときは左から1マス1文字、送りがなも書きます。「ごうかく」「ふごうかく」は児童が選びます。「答えをかくにん」で書く欄の下に答え・お手本を表示します。「アドバイス」では機械の助言と比較図を開きます。</p><p>助言は一字につき最大一つ。画の対応を全体で取り直してから比較するため、順番や一本のずれを理由に後の画すべてを誤り扱いしません。小さなゆれや長さの差は広めに許容します。田・由・甲・申に加え、右・石、工・土、牛・午、天・夫、刀・力などの突き出し、土・士と未・末の横線の長短、己・已・巳の開き、人・入・八の接続、太・犬・玉・主の点の位置を、文字の中の部品でも確認します。すべての誤字を検出するものではありません。境界的な筆跡や部品の対応が不明確なときは断定せず、お手本との比較を案内します。これは精度が保証された採点ではなく、誤助言もあります。筆順の違いだけで合否は決めません。</p><p>画数は指やペンを置いてから離すまでを一画として数えます。誤タッチは「1つもどす」で消せます。画数が違う場合は誤った画を推測で指ささず、数だけ案内します。</p><p>仕分けと進行は同じブラウザー内に保存します。筆跡は再読込すると消えます。共有端末では利用者の交代時に記録を消してください。通信はお手本の取得だけで、筆跡や記録は送信しません。配信元には通常の接続情報が伝わります。Canva内の制限で取得できない場合も、自己判定は使えます。</p><button class="outline" id="resetBtn">きろくを ぜんぶ消す</button></details></section>
+<details class="card" id="connectionDetails"><summary>接続の状態・くわしい設定</summary><section aria-label="ネット接続と準備の状態" class="online-box"><div class="topline"><strong>お手本の接続状態</strong><button class="outline" id="retryOnline">お手本を再読込</button></div><div class="row"><span class="asset-status" id="engineStatus" role="status">認識の準備中…</span><span class="asset-status" id="glyphStatus" role="status">お手本は必要なときに取得</span></div><p id="networkHint">起動時に認識辞書とお手本を取得します。準備中でも見るだけ・自己判定は使えます。</p><details><summary>接続の記録</summary><pre id="onlineLog"></pre><p>端末・Canvaでの表示と助言精度は実機未検証です。</p></details></section></details><details class="card"><summary>先生・おうちの方へ</summary><p>41〜45の全100問。基本は見るだけの仕分け。書くときは左から1マス1文字、送りがなも書きます。「ごうかく」「ふごうかく」は児童が選びます。「答えをかくにん」で書く欄の下に答え・お手本を表示します。「アドバイス」では機械の助言と比較図を開きます。</p><p>主な助言を一字につき一つ表示し、ほかの確認ポイントも開けます。画の対応を全体で取り直してから比較するため、順番や一本のずれを理由に後の画すべてを誤り扱いしません。小さなゆれや長さの差は広めに許容します。田・由・甲・申に加え、右・石、工・土、牛・午、天・夫、刀・力などの突き出し、土・士と未・末の横線の長短、己・已・巳の開き、人・入・八の接続、太・犬・玉・主の点の位置を、文字の中の部品でも確認します。すべての誤字を検出するものではありません。境界的な筆跡や部品の対応が不明確なときは断定せず、お手本との比較を案内します。これは精度が保証された採点ではなく、誤助言もあります。筆順の違いだけで合否は決めません。</p><p>画数は指やペンを置いてから離すまでを一画として数えます。誤タッチは「1つもどす」で消せます。画数が違う場合は誤った画を推測で指ささず、数だけ案内します。</p><p>仕分けと進行は同じブラウザー内に保存します。筆跡は再読込すると消えます。共有端末では利用者の交代時に記録を消してください。通信はお手本の取得だけで、筆跡や記録は送信しません。配信元には通常の接続情報が伝わります。Canva内の制限で取得できない場合も、自己判定は使えます。</p><button class="outline" id="resetBtn">きろくを ぜんぶ消す</button></details></section>
 <section aria-labelledby="studyTitle" hidden="" id="study"><h1 class="sr-only" id="studyTitle" tabindex="-1">漢字のれんしゅう</h1>
 <div class="topline"><button class="text-btn" id="backBtn">← もどる</button><strong id="progressText"></strong><div class="study-nav"><button aria-label="設定と使い方" class="outline" id="openOptions">設定</button><button class="text-btn" id="pauseBtn">ホーム</button></div></div><progress aria-label="れんしゅうの進みぐあい" id="progress" max="100" value="0"></progress>
 <article class="card"><div class="q-meta"><span class="pill" id="qLocation"></span><span class="pill" id="modeBadge"></span></div><p class="instruction" id="questionInstruction"></p><div class="sentence" id="sentence"></div>
@@ -28,9 +29,20 @@
 <p class="hint" hidden="" id="gradeHint"></p>
 <div id="reviewShelf"><div class="inline-answer-tools"><button aria-controls="answerArea" aria-expanded="false" class="outline" id="revealBtn">答えをかくにん</button></div><div aria-live="polite" class="answer-area" hidden="" id="answerArea"><small>こたえ</small><div class="answer-text" id="answer"></div><div id="modelGlyphs"></div><p class="hint" id="modelCaption"></p><p id="answerHint"></p><p hidden="" id="glyphFallbackNote"></p></div><p id="idlePrompt">書けたら チェック</p><div aria-live="polite" class="auto-result" hidden="" id="autoResult"><strong id="autoMessage"></strong><button aria-haspopup="dialog" hidden="" id="candidateAdjust">読取りを直す</button><button class="text-btn" hidden="" id="strictDetailsBtn">直すところ</button></div><button class="outline" id="manualChoiceBtn">自分で判定</button><p hidden="" id="reviewChoiceNote">お手本と見くらべて、自分でえらぼう。</p></div><div id="actionDock"><div class="reveal-actions" id="revealActions"><button class="primary" disabled="" id="autoCheckBtn">書いた字を 自動チェック</button><button class="outline" id="unknownBtn">まだ わからない</button></div><button class="outline" hidden="" id="writeAgainBtn">書きなおす</button><div hidden="" id="autoConfirmBar"><button class="orange" id="selfAgainBtn">あとで練習 →</button><button class="primary wide" hidden="" id="commitAuto">この判定で 次へ</button></div><div class="actions" hidden="" id="gradeActions"><button class="orange" id="againBtn">△ ふごうかく</button><button class="primary" id="goodBtn">○ 書けた！</button></div></div></article><div class="bottomline"><p aria-live="polite" id="sessionStats"></p></div></section>
 <section aria-labelledby="resultTitle" hidden="" id="results"><div class="card"><div class="result-title"><div aria-hidden="true" class="result-symbol">✓</div><h1 id="resultTitle" tabindex="-1">よく がんばったね！</h1><p id="resultMessage"></p></div><div class="stats"><div class="stat"><b id="resultTotal"></b><span>とりくんだ</span></div><div class="stat good"><b id="resultGood"></b><span>書ける</span></div><div class="stat again"><b id="resultAgain"></b><span>ふごうかく</span></div></div><div class="review-choice"><button class="orange wide" id="retryBtn"></button><button class="primary wide" id="retryWriteBtn"></button></div><button class="text-btn wide" id="resultBack">← さいごの しわけを なおす</button><button class="outline wide" id="homeBtn" style="margin-top:12px">はじめの画面へ</button></div><details class="card" id="missedDetails"><summary id="missedSummary"></summary><ul class="result-list" id="missedList"></ul></details></section>
-<details class="card" id="licenseDetails"><summary>お手本の出典</summary><p><a href="https://kanjivg.tagaini.net/" rel="noopener noreferrer" target="_blank">KanjiVG</a> © 2009–2026 Ulrich Apel。<a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a>。SVGから線の形と順番を抽出し、比較用の線・番号・色・丸印を付けて表示しています。字形・派生データにも同ライセンスを適用します。教科書体を元にした線画であり、市販教科書体フォントそのものではありません。配信元はcdn.jsdelivr.net、raw.githubusercontent.com（KanjiVG master）。各配布元による公認を意味しません。</p></details></main><footer>かんじの たからばこ ｜ 41〜45 ・ 100もん<br/>v11・部品の形チェック追加版（iPad対策入り）<br/><span id="saveNote">きろくは このブラウザーに 自動で保存されます。</span></footer>
+<details class="card" id="checkPolicy"><summary>追加した判定と、機械では確認できないこと</summary>
+<p>「示」の3画目と「全」の4画目の上への突き抜けを専用チェックします。部品情報がなくても、対応する画数と線の位置が確認できれば調べます。既存の100問は変更していません。「示」単独の問題は今回の100問にはありません。</p>
+<table class="policy-table"><thead><tr><th>項目</th><th>自動で調べる内容</th><th>注意</th></tr></thead><tbody>
+<tr><td>とめ・はね・はらい</td><td>お手本の筆画種別に応じた、はねの有無・終端方向・余分なはね・払いの方向</td><td>筆圧、止めた力、先端の細さ、払いの力の抜き方は自動判定できません。紙でも確認します。</td></tr>
+<tr><td>向き・角度</td><td>さんずい、れっか、うかんむりの点や短線、しんにょう・えんにょうの折れと終端、横線の傾き</td><td>お手本内の形と比較します。すべての横線を5〜6度に固定せず、水平な線を一律に誤字としません。</td></tr>
+<tr><td>接する・離す</td><td>口・日・目・田・国の囲み部品の角、八、言の点と横線、立の短線と下の横線</td><td>「立」はその字のお手本で接していれば接続、離れていれば間隔を基準にします。</td></tr>
+<tr><td>突き出る・出ない</td><td>示・全、工・王などの上下、土・士の下、木・本・未・末の上、皿・血の下の横線の左右、囲みの右への飛び出し、既存の田系・右／石など</td><td>土・士の縦線が上へ出るのは正しい形です。小さな揺れは許容します。画面上の線から実寸1ミリを断定しません。</td></tr>
+<tr><td>長短・バランス</td><td>土／士・未／末の同長・逆転、三・王・玉・主の横線、川・州の終端高さ、門の左右と内部の大きさ・はみ出し</td><td>書写の好ましい形と、文字の誤りを区別します。常にお手本の実際の形を優先します。</td></tr>
+</tbody></table>
+<p>指導上の参考となる声かけであり、完全一致の採点ではありません。すべての誤りの検出は保証できません。画数違い・小さすぎる字・部品や画の対応が不明なときは、推測で細部を断定しません。端末・iPad・Canvaの実機テストは未実施です。</p>
+<p>参考：<a href="https://www.bunka.go.jp/seisaku/kokugo_nihongo/kokugo_shisaku/joyokanjihyo_sakuin/index.html" target="_blank" rel="noopener noreferrer">文化庁・字体字形の指針</a> ／ <a href="https://kanjivg.tagaini.net/stroke-types.html" target="_blank" rel="noopener noreferrer">KanjiVGの筆画種別</a></p>
+</details><details class="card" id="licenseDetails"><summary>お手本の出典</summary><p><a href="https://kanjivg.tagaini.net/" rel="noopener noreferrer" target="_blank">KanjiVG</a> © 2009–2026 Ulrich Apel。<a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a>。SVGから線の形と順番を抽出し、比較用の線・番号・色・丸印を付けて表示しています。字形・派生データにも同ライセンスを適用します。教科書体を元にした線画であり、市販教科書体フォントそのものではありません。配信元はcdn.jsdelivr.net、raw.githubusercontent.com（KanjiVG master）。各配布元による公認を意味しません。</p></details></main><footer>かんじの たからばこ ｜ 41〜45 ・ 100もん<br/>v12・構造チェック・書写ヒント版（iPad対策入り）<br/><span id="saveNote">きろくは このブラウザーに 自動で保存されます。</span></footer>
 </div><dialog aria-labelledby="dialogTitle" id="confirmDialog"><h2 id="dialogTitle"></h2><p id="dialogMessage"></p><div class="row"><button class="outline" id="cancelDialog">やめる</button><button class="primary" id="confirmAction">つづける</button></div></dialog><noscript><p class="notice">ブラウザーの JavaScript を有効にしてください。</p></noscript>
-<dialog aria-labelledby="optionsTitle" id="studyOptions"><div class="dialog-head"><h2 id="optionsTitle">れんしゅうの設定</h2><button id="closeOptions">とじる</button></div><div id="focusModeChoices"><div aria-label="このれんしゅうのやりかた" class="mode-switch study-mode" role="group"><button aria-pressed="true" id="studySortMode">見るだけで しわけ</button><button aria-pressed="false" id="studyWriteMode">✎ 書いて れんしゅう</button></div></div><p id="focusConnection" role="status"></p><p hidden="" id="focusSaveWarning">今はきろくを保存できません。</p><p id="focusQuestionInfo"></p><p>左から1マスに1文字。書けたら「ごうかく」、練習したいなら「ふごうかく」。「答えをかくにん」で下にお手本が出るよ。</p></dialog><dialog aria-labelledby="candidateTitle" id="candidateDialog"><div class="dialog-head"><h2 id="candidateTitle">読みとった字を直す</h2><button id="closeCandidates">とじる</button></div><div id="candidateContent"><div id="candidateRows"></div><p class="hint" id="autoCaution"></p></div></dialog><dialog aria-labelledby="strictTitle" id="strictDialog"><div class="dialog-head"><h2 id="strictTitle">お手本とアドバイス</h2><button id="closeStrict">とじる</button></div><p>赤い「ここ！」を、青いお手本とくらべよう。自分でえらんで次へ進めるよ。</p><p class="advice-answer" id="adviceAnswer"></p><div id="strictContents"></div><p class="strict-limit">機械の助言はまちがうこともあります。合否は決めません。気になるときは先生と見てね。</p><div class="detail-decisions"><button class="orange" id="detailAgainBtn">ふごうかく →</button><button class="primary" id="detailGoodBtn">ごうかく →</button></div></dialog><script>"use strict";
+<dialog aria-labelledby="optionsTitle" id="studyOptions"><div class="dialog-head"><h2 id="optionsTitle">れんしゅうの設定</h2><button id="closeOptions">とじる</button></div><div id="focusModeChoices"><div aria-label="このれんしゅうのやりかた" class="mode-switch study-mode" role="group"><button aria-pressed="true" id="studySortMode">見るだけで しわけ</button><button aria-pressed="false" id="studyWriteMode">✎ 書いて れんしゅう</button></div></div><p id="focusConnection" role="status"></p><label class="advice-setting"><input id="styleAdviceToggle" type="checkbox" checked> 細かな書写のヒントも表示する</label><p class="hint">突き出し・接続・別の字になる長短は常に確認。チェックを外すと、はねの形・線の傾き・バランスなどの書写ヒントを省きます。合否は自分で選びます。</p><p hidden="" id="focusSaveWarning">今はきろくを保存できません。</p><p id="focusQuestionInfo"></p><p>左から1マスに1文字。書けたら「ごうかく」、練習したいなら「ふごうかく」。「答えをかくにん」で下にお手本が出るよ。</p></dialog><dialog aria-labelledby="candidateTitle" id="candidateDialog"><div class="dialog-head"><h2 id="candidateTitle">読みとった字を直す</h2><button id="closeCandidates">とじる</button></div><div id="candidateContent"><div id="candidateRows"></div><p class="hint" id="autoCaution"></p></div></dialog><dialog aria-labelledby="strictTitle" id="strictDialog"><div class="dialog-head"><h2 id="strictTitle">お手本とアドバイス</h2><button id="closeStrict">とじる</button></div><p>赤い「ここ！」を、青いお手本とくらべよう。自分でえらんで次へ進めるよ。</p><p class="advice-answer" id="adviceAnswer"></p><div id="strictContents"></div><p class="strict-limit">機械の助言はまちがうこともあります。合否は決めません。気になるときは先生と見てね。</p><div class="detail-decisions"><button class="orange" id="detailAgainBtn">ふごうかく →</button><button class="primary" id="detailGoodBtn">ごうかく →</button></div></dialog><script>"use strict";
 const RAW={
 41:[
 ["","りょうあし","両足","を{出|だ}す。"],
@@ -144,10 +156,10 @@ const RAW={
 ]};
 const QUESTIONS=Object.entries(RAW).flatMap(([page,rows])=>rows.map((r,i)=>({id:`${page}-${i<10?1:2}-${i%10+1}`,page:Number(page),group:i<10?1:2,n:i%10+1,before:r[0],reading:r[1],answer:r[2],after:r[3]})));
 const BY_ID=new Map(QUESTIONS.map(q=>[q.id,q])), KEY="kanji-takarabako-41-45-v1", $=id=>document.getElementById(id);
-const defaultState=()=>({version:1,records:{},session:null,prefs:{pages:[41,42,43,44,45],limit:"all",shuffle:false,style:"sort"}});
+const defaultState=()=>({version:1,records:{},session:null,prefs:{pages:[41,42,43,44,45],limit:"all",shuffle:false,style:"sort",styleAdvice:true}});
 let state=defaultState(),visibleAnswer=false,gradeLocked=false,dialogCallback=null,answerUnknown=false,focusManual=false;
 function validRecord(r){return r&&(r.status==="good"||r.status==="again")&&Number.isInteger(r.attempts)&&r.attempts>=1}
-function load(){try{const raw=localStorage.getItem(KEY);if(!raw)return;const x=JSON.parse(raw);if(x.version!==1)throw Error("version");state.records=Object.fromEntries(Object.entries(x.records||{}).filter(([id,r])=>BY_ID.has(id)&&validRecord(r)));if(x.prefs){state.prefs.pages=Array.isArray(x.prefs.pages)?x.prefs.pages.filter(p=>[41,42,43,44,45].includes(p)):[41,42,43,44,45];state.prefs.limit=["all","10","20"].includes(x.prefs.limit)?x.prefs.limit:"all";state.prefs.shuffle=!!x.prefs.shuffle;state.prefs.style=x.prefs.style==="write"?"write":"sort"}const s=x.session;if(s&&Array.isArray(s.ids)&&s.ids.length&&new Set(s.ids).size===s.ids.length&&s.ids.every(id=>BY_ID.has(id))&&Number.isInteger(s.index)&&s.index>=0&&s.index<=s.ids.length&&Array.isArray(s.history)&&s.history.length===s.index&&s.history.every((h,i)=>h&&h.id===s.ids[i]&&["good","again"].includes(h.status)&&(!h.previous||validRecord(h.previous))))state.session={ids:s.ids,index:s.index,history:s.history,mode:s.mode==="review"?"review":"normal",style:s.style==="write"?"write":"sort"}}catch(e){state=defaultState()}}
+function load(){try{const raw=localStorage.getItem(KEY);if(!raw)return;const x=JSON.parse(raw);if(x.version!==1)throw Error("version");state.records=Object.fromEntries(Object.entries(x.records||{}).filter(([id,r])=>BY_ID.has(id)&&validRecord(r)));if(x.prefs){state.prefs.pages=Array.isArray(x.prefs.pages)?x.prefs.pages.filter(p=>[41,42,43,44,45].includes(p)):[41,42,43,44,45];state.prefs.limit=["all","10","20"].includes(x.prefs.limit)?x.prefs.limit:"all";state.prefs.shuffle=!!x.prefs.shuffle;state.prefs.style=x.prefs.style==="write"?"write":"sort";state.prefs.styleAdvice=x.prefs.styleAdvice!==false}const s=x.session;if(s&&Array.isArray(s.ids)&&s.ids.length&&new Set(s.ids).size===s.ids.length&&s.ids.every(id=>BY_ID.has(id))&&Number.isInteger(s.index)&&s.index>=0&&s.index<=s.ids.length&&Array.isArray(s.history)&&s.history.length===s.index&&s.history.every((h,i)=>h&&h.id===s.ids[i]&&["good","again"].includes(h.status)&&(!h.previous||validRecord(h.previous))))state.session={ids:s.ids,index:s.index,history:s.history,mode:s.mode==="review"?"review":"normal",style:s.style==="write"?"write":"sort"}}catch(e){state=defaultState()}}
 function save(){let ok=true;try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){ok=false}$("storageWarning").hidden=ok;$("saveNote").textContent=ok?"きろくは このブラウザーに 自動で保存されます。":"今は きろくを保存できません。"}
 function showScreen(name){
  const changed=$(name).hidden;
@@ -206,7 +218,7 @@ function grade(status,selfDecision=true){
  const previous=state.records[q.id]?{...state.records[q.id]}:null;
  s.history.push({id:q.id,status,previous,style:s.style});
  const advice=online.result?.id===q.id&&online.result?.revision===online.revision?online.result:null;
- state.records[q.id]={status,style:s.style,assessment:"learner-choice-v11",adviceViewed:!!advice,nextGoal:advice?.reports.map(r=>r.text)||[],attempts:(previous?.attempts||0)+1};
+ state.records[q.id]={status,style:s.style,assessment:"learner-choice-v12",adviceViewed:!!advice,nextGoal:advice?.reports.map(r=>r.text)||[],attempts:(previous?.attempts||0)+1};
  s.index++;save();renderQuestion();
 }
 function goBack(){const s=state.session;if(!s||!s.history.length)return;const h=s.history.pop();s.index--;if(h.previous)state.records[h.id]=h.previous;else delete state.records[h.id];save();renderQuestion()}
@@ -264,8 +276,8 @@ function pointerDown(e){
  beginStroke(e.pointerId,e);
  try{canvas.setPointerCapture(e.pointerId)}catch(err){}
 }
-function pointerMove(e){if(e.pointerId!==activePointer||!activeStroke)return;blockDefault(e);moveStroke(e)}
-function endStroke(e){if(e.pointerId!==activePointer)return;blockDefault(e);finishStroke()}
+function pointerMove(e){if(e.pointerId!==activePointer||!activeStroke)return;blockDefault(e);const events=typeof e.getCoalescedEvents==="function"?e.getCoalescedEvents():[];for(const p of events.length?events:[e])moveStroke(p)}
+function endStroke(e){if(e.pointerId!==activePointer)return;blockDefault(e);if(e.type==="pointerup"&&activeStroke&&Number.isFinite(e.clientX)&&Number.isFinite(e.clientY))moveStroke(e);finishStroke()}
 canvas.addEventListener("pointerdown",pointerDown,{passive:false});
 canvas.addEventListener("pointermove",pointerMove,{passive:false});
 canvas.addEventListener("pointerup",endStroke,{passive:false});
@@ -287,7 +299,7 @@ function touchEnd(e){
  let tracked=false;
  for(const t of Array.from(e.changedTouches||[])){
   if(canvasTouches.delete(t.identifier))tracked=true;
-  if(activePointer==="touch:"+t.identifier)finishStroke();
+  if(activePointer==="touch:"+t.identifier){if(e.type==="touchend"&&activeStroke)moveStroke(t);finishStroke();}
  }
  if(tracked)blockDefault(e);
  if(e.touches?.length===0){canvasTouches.clear();if(activePointer!==null)finishStroke()}
@@ -328,6 +340,7 @@ function resetOnlineQuestion(){
 function renderSlots(){const n=Array.from(currentQuestion()?.answer||"").length;$("slotCaption").textContent=n?n+"文字":""}
 function invalidateAuto(){online.revision++;online.job++;online.result=null;online.checking=false;$("autoResult").hidden=true;if($("strictDialog").open)$("strictDialog").close();syncFocusUI()}
 function syncFocusUI(){
+ $("styleAdviceToggle").checked=state.prefs.styleAdvice!==false;
  const writing=isWriting();$("study").setAttribute("data-mode",writing?"write":"sort");$("study").setAttribute("data-phase","write");
  $("revealActions").hidden=false;$("autoCheckBtn").hidden=false;$("autoCheckBtn").disabled=false;$("autoCheckBtn").textContent="アドバイス";
  $("revealBtn").hidden=false;$("revealBtn").textContent=visibleAnswer?"答えをかくす":"答えをかくにん";$("revealBtn").setAttribute("aria-expanded",String(visibleAnswer));$("unknownBtn").hidden=true;$("writeAgainBtn").hidden=true;$("autoConfirmBar").hidden=true;
@@ -496,7 +509,7 @@ function checkComponentStructure(reordered,char,template){
  }return result;
 }
 
-function adviceReport(lines,char,template){
+function coreAdviceReport(lines,char,template){
  const base={char,lines,reference:template?.lines||[],text:"",focus:null,kind:"note",mapping:[]};
  if(!template)return{...base,text:"お手本を読みこめなかったよ。もう一度開いてね。"};
  if(!lines.length)return{...base,text:"お手本を見て、一画ずつ書いてみよう。"};
@@ -551,6 +564,234 @@ function fieldFamilySignature(lines){
  if(height<.25)return{ok:false,message:"外わくを大きく書いてね"};
  return{ok:true,top:(level(top)-v.box.top)/height,bottom:(v.box.bottom-level(bottom))/height,stroke:v.stroke+1};
 }
+// v12: structural identity and optional handwriting-style suggestions are distinct.
+// No pressure, taper, pen force or physical millimetres are inferred from XY traces.
+const DETAIL_ELEMENTS=new Set(["示","全","工","土","士","王","玉","主","木","本","未","末","天","夫","口","囗","日","目","田","由","甲","申","皿","血","言","立","八","川","州","門","間","開","三","水","氵","灬","火","宀","辶","廴"]);
+const DETAIL_LIMITS=Object.freeze({over:.055,gap:.065,touch:.018,ratio:.07,equal:.06,angle:48,localMean:.24,localWorst:.48});
+function detailOptions(options){
+ if(options)return{style:options.style!==false};
+ return{style:typeof state!=="undefined"?state.prefs.styleAdvice!==false:true};
+}
+function detailComponents(template,char){
+ const all=[{element:char,indices:template.lines.map((_,i)=>i),complete:true},...(template.components||[])],seen=new Set();
+ return all.filter(c=>{if(c.complete===false||c.partial)return false;const key=c.element+":"+c.indices.join(",");if(seen.has(key))return false;seen.add(key);return true});
+}
+function detailIssue(c,u,r,target,others,text,rule,priority=90,kind="structure",pointU=null,pointR=null){return{...structureIssue(c,u,r,target,others,text,rule,pointU,pointR),priority,kind}}
+function detailAngle(a,b){const den=Math.hypot(a.x,a.y)*Math.hypot(b.x,b.y);return den<1e-8?0:Math.acos(Math.max(-1,Math.min(1,vecDot(a,b)/den)))*180/Math.PI}
+function detailVector(line,from=.06,to=.94){const p=sampleArc(line,101);return vecSub(p[Math.round(to*100)],p[Math.round(from*100)])}
+function detailY(line,x){
+ const values=[];
+ for(let i=1;i<line.length;i++){const a=line[i-1],b=line[i];if(x>=Math.min(a.x,b.x)-.001&&x<=Math.max(a.x,b.x)+.001&&Math.abs(b.x-a.x)>1e-7)values.push(a.y+(x-a.x)/(b.x-a.x)*(b.y-a.y))}
+ return values.length?values.reduce((a,b)=>a+b,0)/values.length:null;
+}
+function detailX(line,y){return detailY(line.map(p=>({x:p.y,y:p.x})),y)}
+function detailVerticals(lines){return lines.flatMap((line,i)=>structureRuns(line,"v").map(v=>({...v,i,x:(v.a.x+v.b.x)/2}))).filter(v=>v.span>.28).sort((a,b)=>a.x-b.x)}
+function detailBoundary(c,u,r,target,baseline,side,mode,out){
+ const rh=matchedHorizontal(r.lines[baseline]),uh=matchedHorizontal(u.lines[baseline]);if(!rh||!uh||rh.span<.17||uh.span<.15)return;
+ const select=side==="top"?topPoint:line=>line.reduce((a,b)=>b.y>a.y?b:a);
+ const rp=select(r.lines[target]),up=select(u.lines[target]);
+ if(up.x<uh.box.left-.04||up.x>uh.box.right+.04)return;
+ const sign=side==="top"?1:-1,ref=sign*normalAbove(rp,rh),actual=sign*normalAbove(up,uh);
+ const label=side==="top"?"上":"下",stroke=c.indices[target]+1;
+ if(mode==="stop"&&ref<.045&&actual>Math.max(DETAIL_LIMITS.over,ref+.045))out.push(detailIssue(c,u,r,target,[baseline],stroke+"画目は、横線より"+label+"へ突き出さずに止めよう。","boundary-"+side,110,"structure",up,rp));
+ if(mode==="extend"&&ref>.075&&actual<.025)out.push(detailIssue(c,u,r,target,[baseline],stroke+"画目は、横線より"+label+"へ出そう。","required-extension",105,"structure",up,rp));
+}
+function detailAxisRules(c,u,r,out){
+ const e=c.element,n=r.lines.length,hs=horizontalFeatures(r.lines);if(!hs.length)return;
+ // These checks are independent of glyph component annotations.
+ if(e==="示"&&n===5){detailBoundary(c,u,r,2,1,"top","stop",out);return}
+ if(e==="全"&&n===6){detailBoundary(c,u,r,3,2,"top","stop",out);detailBoundary(c,u,r,3,5,"bottom","stop",out);return}
+ const allowed=["工","土","士","王","玉","主","木","本","未","末"];
+ if(!allowed.includes(e))return;
+ const top=hs[0],bottom=hs.at(-1),center=(top.box.left+top.box.right)/2;
+ const vs=r.lines.map((line,i)=>({i,b:inkBounds([line])})).filter(v=>v.i!==top.i&&v.b.bottom-v.b.top>.38&&v.b.right-v.b.left<.22&&Math.abs((v.b.left+v.b.right)/2-center)<.2).sort((a,b)=>(b.b.bottom-b.b.top)-(a.b.bottom-a.b.top));
+ if(!vs.length)return;const target=vs[0].i;
+ const mode=["土","士","木","本","未","末"].includes(e)?"extend":"stop";
+ detailBoundary(c,u,r,target,top.i,"top",mode,out);
+ if(["工","土","士","王","玉","主"].includes(e)&&bottom.i!==top.i)detailBoundary(c,u,r,target,bottom.i,"bottom","stop",out);
+}
+function detailSpacing(c,u,r,a,b,out,label){
+ if(!u.lines[a]||!u.lines[b])return;
+ const ref=polylineContact(r.lines[a],r.lines[b]),actual=polylineContact(u.lines[a],u.lines[b]);
+ if(ref.distance>=.055&&actual.distance<DETAIL_LIMITS.touch)out.push(detailIssue(c,u,r,a,[b],label+"は、くっつけずに間をあけよう。","separation",94,"structure",actual.a,ref.a));
+ else if(ref.distance<.025&&actual.distance>DETAIL_LIMITS.gap&&actual.distance-ref.distance>.05)out.push(detailIssue(c,u,r,a,[b],label+"を、お手本のようにつなげよう。","contact",94,"structure",actual.a,ref.a));
+}
+function detailBox(c,u,r,out){
+ const hs=horizontalFeatures(r.lines),vs=detailVerticals(r.lines);if(hs.length<2||vs.length<2)return;
+ const top=hs[0],bottom=hs.at(-1),left=vs[0],right=vs.at(-1);
+ if(right.x-left.x<.24||bottom.y-top.y<.22)return;
+ const uhTop=matchedHorizontal(u.lines[top.i]),uhBottom=matchedHorizontal(u.lines[bottom.i]);
+ const uvLeft=structureRuns(u.lines[left.i],"v").sort((a,b)=>b.span-a.span)[0],uvRight=structureRuns(u.lines[right.i],"v").sort((a,b)=>b.span-a.span)[0];
+ if(!uhTop||!uhBottom||!uvLeft||!uvRight)return;
+ // Corners belonging to one pen stroke are checked by the bend rule, not by a gap rule.
+ for(const [h,v,label] of [[top,left,"左上"],[top,right,"右上"],[bottom,left,"左下"],[bottom,right,"右下"]]){
+  if(h.i===v.i)continue;const uh=h.i===top.i?uhTop:uhBottom,uv=v.i===left.i?uvLeft:uvRight;
+  const ref=polylineContact(h.points,v.points),actual=polylineContact(uh.points,uv.points);
+  if(ref.distance<.055&&actual.distance>Math.max(.07,ref.distance+.055))out.push(detailIssue(c,u,r,h.i,[v.i],c.element+"の"+label+"の角を、すき間があかないようにつなげよう。","box-corner",100,"structure",actual.a,ref.a));
+ }
+ // A baseline may protrude in 皿; preserve such reference-specific extensions.
+ for(const h of hs){
+  if(h.i===right.i)continue;const uh=matchedHorizontal(u.lines[h.i]);if(!uh)continue;
+  const rp=h.points.reduce((a,b)=>b.x>a.x?b:a),up=uh.points.reduce((a,b)=>b.x>a.x?b:a);
+  const rx=detailX(right.points,rp.y),ux=detailX(uvRight.points,up.y);
+  if(rx===null||ux===null)continue;const expected=rp.x-rx,actual=up.x-ux;
+  if(expected<.04&&actual>Math.max(.06,expected+.05))out.push(detailIssue(c,u,r,h.i,[right.i],c.element+"の横線は、右のたて線から飛び出さないようにしよう。","box-right-over",99,"structure",up,rp));
+ }
+ // Loss of the top-right corner (round arc / straight diagonal instead of a fold).
+ if(top.i===right.i){
+  const ix=detailX(right.points,top.y),iy=detailY(top.points,right.x);
+  if(ix!==null&&iy!==null){const corner={x:ix,y:iy};const refNear=polylineContact([corner],r.lines[top.i]);
+   const mapped={x:uhTop.box.right,y:uhTop.box.top};const actual=polylineContact([mapped],u.lines[top.i]);
+   if(refNear.distance<.04&&actual.distance>.12)out.push(detailIssue(c,u,r,top.i,[],c.element+"の右上を、横からたてへ折ろう。","box-fold",65,"style",mapped,corner));
+  }
+ }
+}
+function detailDish(c,u,r,out){
+ const hs=horizontalFeatures(r.lines),vs=detailVerticals(r.lines);if(!hs.length||vs.length<2)return;
+ const h=hs.at(-1),uh=matchedHorizontal(u.lines[h.i]);if(!uh)return;
+ const left=vs[0],right=vs.at(-1),ul=structureRuns(u.lines[left.i],"v").sort((a,b)=>b.span-a.span)[0],ur=structureRuns(u.lines[right.i],"v").sort((a,b)=>b.span-a.span)[0];if(!ul||!ur)return;
+ const refWidth=right.x-left.x,inkWidth=(ur.a.x+ur.b.x-ul.a.x-ul.b.x)/2;if(refWidth<.2||inkWidth<.2)return;
+ const margins=[{side:"左",ref:left.x-h.box.left,actual:(ul.a.x+ul.b.x)/2-uh.box.left,p:uh.points[0],q:h.points[0],i:left.i},{side:"右",ref:h.box.right-right.x,actual:uh.box.right-(ur.a.x+ur.b.x)/2,p:uh.points.at(-1),q:h.points.at(-1),i:right.i}];
+ for(const m of margins)if(m.ref/refWidth>.07&&m.actual/inkWidth<.035)out.push(detailIssue(c,u,r,h.i,[m.i],c.element+"のいちばん下の横線を、わくより"+m.side+"へ長く出そう。","dish-extension",96,"structure",m.p,m.q));
+}
+function detailLengths(c,u,r,out,options){
+ const e=c.element,hs=horizontalFeatures(r.lines);
+ if(["土","士","未","末"].includes(e)&&hs.length>=2){
+  const a=hs[0],b=hs[1],x=matchedHorizontal(u.lines[a.i]),y=matchedHorizontal(u.lines[b.i]);if(!x||!y)return;
+  const expected=(a.span-b.span)/Math.max(a.span,b.span),actual=(x.span-y.span)/Math.max(x.span,y.span);
+  if(Math.abs(expected)>.12&&Math.abs(actual)<DETAIL_LIMITS.equal){const target=expected>0?a:b;
+   out.push(detailIssue(c,u,r,target.i,[expected>0?b.i:a.i],e+"は横線の長さを変えよう。"+(expected>0?"上":"下")+"を長くしよう。","equal-confusable",92));}
+ }
+ if(!options.style||!["三","王","玉","主","全"].includes(e)||hs.length<3)return;
+ const hh=e==="全"?hs.slice(-3):hs.slice(0,3),us=hh.map(h=>matchedHorizontal(u.lines[h.i]));if(us.some(x=>!x))return;
+ for(const [short,long] of [[1,0],[1,2],[0,2]]){
+  const expected=(hh[long].span-hh[short].span)/Math.max(hh[long].span,hh[short].span),actual=(us[long].span-us[short].span)/Math.max(us[long].span,us[short].span);
+  if(expected>.09&&actual<.035)out.push(detailIssue(c,u,r,hh[long].i,[hh[short].i],e+"の横線の長さを見よう。"+(long===2?"いちばん下":"上")+"の線を、比べている線より長くしよう。","three-lengths",50,"style"));
+ }
+}
+function detailSteps(c,u,r,out,options){
+ if(!options.style)return;
+ const vs=r.lines.map((line,i)=>({i,b:inkBounds([line])})).filter(v=>v.b.bottom-v.b.top>.4&&v.b.right-v.b.left<.32).sort((a,b)=>a.b.left-b.b.left);
+ if(vs.length!==3)return;
+ for(let k=1;k<3;k++){
+  const a=vs[k-1],b=vs[k],ua=inkBounds([u.lines[a.i]]),ub=inkBounds([u.lines[b.i]]),expected=b.b.bottom-a.b.bottom,actual=ub.bottom-ua.bottom;
+  if(expected>.045&&actual<.015)out.push(detailIssue(c,u,r,b.i,[a.i],c.element+"のたて線の終わりを見よう。右側の線を、青いお手本の高さまで下げよう。","vertical-steps",45,"style"));
+ }
+}
+function detailGate(c,u,r,reordered,template,out,options){
+ if(c.element!=="門")return;
+ const vs=detailVerticals(r.lines);if(vs.length<2)return;const left=vs[0],right=vs.at(-1);
+ const ul=inkBounds([u.lines[left.i]]),ur=inkBounds([u.lines[right.i]]),rl=inkBounds([r.lines[left.i]]),rr=inkBounds([r.lines[right.i]]);
+ if(options.style&&Math.abs((ul.bottom-ur.bottom)-(rl.bottom-rr.bottom))>.16)out.push(detailIssue(c,u,r,right.i,[left.i],"門がまえの左右の終わりの高さを、青いお手本と比べよう。","gate-height",45,"style"));
+ const bounds=inkBounds(r.lines),inside=[];
+ template.lines.forEach((line,i)=>{if(c.indices.includes(i))return;const ps=line.map(p=>({x:(p.x-r.left)/r.scale,y:(p.y-r.top)/r.scale})),b=inkBounds([ps]);if(b.left>left.x+.03&&b.right<right.x-.03&&b.top>bounds.top+.15&&b.bottom<bounds.bottom+.03)inside.push(i)});
+ if(!inside.length)return;
+ const innerR=inkBounds(inside.map(i=>template.lines[i].map(p=>({x:(p.x-r.left)/r.scale,y:(p.y-r.top)/r.scale})))),innerU=inkBounds(inside.map(i=>reordered[i].map(p=>({x:(p.x-u.left)/u.scale,y:(p.y-u.top)/u.scale}))));
+ const leftX=(ul.left+ul.right)/2,rightX=(ur.left+ur.right)/2;
+ if(innerU.left<leftX+.015||innerU.right>rightX-.015||innerU.bottom>Math.max(ul.bottom,ur.bottom)+.05)out.push(detailIssue(c,u,r,right.i,[left.i],"門がまえの中の部分を、わくからはみ出さない大きさにしよう。","gate-containment",95));
+ else if(options.style){const refW=innerR.right-innerR.left,inkW=innerU.right-innerU.left;if(refW>.1&&(inkW<refW*.5||inkW>refW*1.65))out.push(detailIssue(c,u,r,right.i,[left.i],"門がまえの中の部分の大きさを、青いお手本と比べよう。","gate-size",40,"style"))}
+}
+function detailDirections(c,u,r,template,out,options){
+ const e=c.element,radical=["氵","灬","宀","辶","廴"].includes(e)||(e==="水"&&r.lines.length===3)||(e==="火"&&r.lines.length===4&&c.variant);
+ if(!options.style&&!radical)return;
+ const types=c.indices.map(i=>(template.strokeTypes?.[i]||""));
+ for(let i=0;i<r.lines.length;i++){
+  if(types[i].includes("/"))continue;
+  const type=types[i][0],rv=detailVector(r.lines[i]),uv=detailVector(u.lines[i]),angle=detailAngle(rv,uv),len=lineLength(r.lines[i]);
+  if(len<.025||lineLength(u.lines[i])<.02)continue;
+  const short=type==="㇔"||type==="㇀"||radical&&len<.5;
+  const flattened=radical&&Math.abs(rv.y)>Math.abs(rv.x)*.25&&Math.abs(uv.x)>.06&&Math.abs(uv.y)<Math.abs(uv.x)*.12&&angle>15;
+  if(short&&(angle>DETAIL_LIMITS.angle||flattened)){const label=e==="水"&&r.lines.length===3?"さんずい":e;
+   const text=label+"の"+(c.indices[i]+1)+"画目を、青い点から"+directionWord(rv.x,rv.y)+"へ。線の向きも比べよう。";
+   out.push(detailIssue(c,u,r,i,[],text,"stroke-direction",radical?75:35,radical?"structure":"style",u.lines[i].at(-1),r.lines[i].at(-1)));
+  }
+  if(!options.style)continue;
+  if(type==="㇐"||(!type&&Math.abs(rv.x)>.3&&Math.abs(rv.y)<Math.abs(rv.x)*.2)){
+   // Compare with this reference, not a universal 5–6 degree mandate.
+   if(rv.x>.15&&uv.x>.15){const refRise=Math.atan2(-rv.y,rv.x)*180/Math.PI,rise=Math.atan2(-uv.y,uv.x)*180/Math.PI;
+    if(refRise>=2&&refRise<=15&&rise<1&&refRise-rise>2)out.push(detailIssue(c,u,r,i,[],(c.indices[i]+1)+"画目の横線は、お手本にならって少し右上がりに書いてみよう。","horizontal-style",20,"style"));
+    else if(Math.abs(refRise-rise)>18)out.push(detailIssue(c,u,r,i,[],(c.indices[i]+1)+"画目の横線の傾きを、青い線と比べよう。","horizontal-angle",35,"style"));
+   }
+  }
+  if(type==="㇏"||type==="㇒"||["辶","廴"].includes(e)&&i===r.lines.length-1){
+   const a=detailVector(r.lines[i],.75,1),b=detailVector(u.lines[i],.75,1);
+   if(detailAngle(a,b)>35||(a.x>.04&&b.x>.04&&a.y<Math.abs(a.x)*.2&&b.y>Math.abs(b.x)*.35&&detailAngle(a,b)>20))out.push(detailIssue(c,u,r,i,[],(c.indices[i]+1)+"画目のはらいの終わりを、青い線の向きへ。細くぬけるかは、紙でも確かめよう。","sweep-direction",52,"style",u.lines[i].at(-1),r.lines[i].at(-1)));
+  }
+ }
+ if(options.style&&["辶","廴"].includes(e)){
+  const ru=normalizeInk(r.lines),uu=normalizeInk(u.lines);
+  for(let i=0;i<ru.length;i++){if(lineLength(ru[i])<.45)continue;const a=sampleArc(ru[i],25),b=sampleArc(uu[i],25);let best={d:0,k:0};for(let k=4;k<21;k++){const turn=detailAngle(vecSub(a[k],a[k-3]),vecSub(a[k+3],a[k]));if(turn>50&&dpt(a[k],b[k])>best.d)best={d:dpt(a[k],b[k]),k}}
+   if(best.d>.16)out.push(detailIssue(c,u,r,i,[],e+"の折れ曲がるところを、青い線と比べよう。","radical-bend",48,"style",sampleArc(u.lines[i],25)[best.k],sampleArc(r.lines[i],25)[best.k]));
+  }
+ }
+}
+function terminalTurn(line){
+ const p=sampleArc(line,65);let best={angle:0,length:0,pivot:p[52],vector:vecSub(p[64],p[52]),k:52};
+ for(let k=42;k<=60;k++){
+  const incoming=vecSub(p[k],p[Math.max(0,k-9)]),outgoing=vecSub(p[64],p[k]),length=Math.hypot(outgoing.x,outgoing.y),angle=detailAngle(incoming,outgoing);
+  if(length>.012&&angle>best.angle)best={angle,length,pivot:p[k],vector:outgoing,k};
+ }return best;
+}
+function detailEndings(c,u,r,template,out,options){
+ if(!options.style)return;
+ const hookTypes=new Set(["㇁","㇂","㇃","㇆","㇈","㇉","㇖","㇚","㇟","㇡"]);
+ for(let i=0;i<r.lines.length;i++){
+  const raw=template.strokeTypes?.[c.indices[i]]||"";if(!raw||raw.includes("/"))continue;
+  const type=raw[0],ref=r.lines[i],ink=u.lines[i];if(lineLength(ref)<.2)continue;
+  // Direction-normalize only for end shape. Drawing direction is checked separately.
+  const rc=sampleArc(ref),ic=sampleArc(ink),reverse=pathCost(ic,rc).reverse,aligned=reverse?[...ink].reverse():ink;
+  const a=terminalTurn(ref),b=terminalTurn(aligned);
+  if(hookTypes.has(type)&&a.angle>55&&a.length>.018){
+   if(b.angle<40||b.length<a.length*.30||detailAngle(a.vector,b.vector)>35)out.push(detailIssue(c,u,r,i,[],(c.indices[i]+1)+"画目の終わりは、青い線の向きへ短くはねよう。","hook-shape",60,"style",aligned.at(-1),ref.at(-1)));
+  }else if(["㇐","㇑","㇕"].includes(type)&&a.angle<38&&b.angle>85&&b.length>.035){
+   out.push(detailIssue(c,u,r,i,[],(c.indices[i]+1)+"画目の終わりは、お手本の形で止めよう。余分なはねをつけないようにしよう。","extra-hook",58,"style",aligned.at(-1),ref.at(-1)));
+  }
+ }
+}
+function detailAnalyze(reordered,char,template,options){
+ const out=[],coverage={checked:0,uncertain:0};
+ for(const c of detailComponents(template,char)){
+  if(c.indices.some(i=>!reordered[i]?.length))continue;
+  const r=componentFrame(c.indices.map(i=>template.lines[i])),u=componentFrame(c.indices.map(i=>reordered[i]));if(!r||!u)continue;
+  const aa=normalizeInk(u.lines),bb=normalizeInk(r.lines),costs=aa.map((l,i)=>pathCost(sampleArc(l),sampleArc(bb[i])).cost);
+  // A damaged stroke may still be matched using its other anchors.
+  const anchors=[...costs].sort((a,b)=>a-b).slice(0,Math.max(1,costs.length-1));
+  if(anchors.reduce((a,b)=>a+b,0)/anchors.length>.24||costs.some(x=>x>.65)){coverage.uncertain++;continue}
+  if(DETAIL_ELEMENTS.has(c.element)){
+   coverage.checked++;
+   detailAxisRules(c,u,r,out);
+   if(["口","囗","日","目","田","由","甲","申"].includes(c.element))detailBox(c,u,r,out);
+   if(["皿","血"].includes(c.element))detailDish(c,u,r,out);
+   if(c.element==="八"&&r.lines.length===2)detailSpacing(c,u,r,0,1,out,"八の上の左右の線");
+   if(c.element==="言"&&r.lines.length===7)detailSpacing(c,u,r,0,1,out,"言の点と、その下の横線");
+   if(c.element==="立"&&r.lines.length===5){detailSpacing(c,u,r,2,4,out,"立の左の短い線と下の横線");detailSpacing(c,u,r,3,4,out,"立の右の線と下の横線")}
+   detailLengths(c,u,r,out,options);
+   if(["川","州"].includes(c.element))detailSteps(c,u,r,out,options);
+   detailGate(c,u,r,reordered,template,out,options);
+  }
+  // All components may carry stroke types. Deduplication below collapses repeats.
+  detailDirections(c,u,r,template,out,options);
+  detailEndings(c,u,r,template,out,options);
+ }
+ const seen=new Set();const issues=out.filter(x=>options.style||x.kind!=="style").sort((a,b)=>b.priority-a.priority).filter(x=>{const key=x.rule+":"+x.target+":"+x.others.join(",");if(seen.has(key))return false;seen.add(key);return true});
+ return{issues,coverage};
+}
+function adviceReport(lines,char,template,options=null){
+ const base=coreAdviceReport(lines,char,template),settings=detailOptions(options);
+ if(!template||base.mapping.length!==template.lines.length||!base.mapping.length)return base;
+ const reordered=Array(template.lines.length);base.mapping.forEach((j,i)=>reordered[j]=lines[i]);
+ const more=detailAnalyze(reordered,char,template,settings);
+ const converted=more.issues.map(s=>({char,lines,reference:template.lines,text:s.text,kind:s.kind,rule:s.rule,mapping:base.mapping,priority:s.priority,
+  focus:{input:base.mapping.indexOf(s.target),ref:s.target,inputOthers:s.others.map(j=>base.mapping.indexOf(j)),refOthers:s.others,inputPoint:s.pointU,refPoint:s.pointR}}));
+ const baseIsAdvice=["structure","point","direction","order"].includes(base.kind);
+ const candidates=[...converted,...(baseIsAdvice?[{...base,priority:base.kind==="structure"?98:base.kind==="point"?85:10}]:[])].sort((a,b)=>b.priority-a.priority);
+ const unique=[];for(const v of candidates)if(!unique.some(x=>x.rule===v.rule&&x.focus?.ref===v.focus?.ref&&x.text===v.text))unique.push(v);
+ let chosen=unique[0]||base;
+ if(!unique.length&&more.coverage.uncertain&&base.kind==="encourage")chosen={...base,kind:"note",text:"形や線の対応をはっきり確認できないところがあるよ。お手本と見くらべよう。"};
+ const manual=["筆圧・止めた力・払いの先端の細さは、この画面の線だけでは判定していません。紙の字とお手本を見比べてください。"];
+ return{...chosen,findings:unique,coverage:more.coverage,manualReview:manual,styleAdvice:settings.style};
+}
+
 function addInk(svg,lines,color,width=2.3){const ns="http://www.w3.org/2000/svg";for(const line of lines){if(!line?.length)continue;const p=document.createElementNS(ns,"path");p.setAttribute("d",line.map((q,j)=>(j?"L":"M")+(q.x*100+4.5)+","+(q.y*100+4.5)).join(" "));p.setAttribute("fill","none");p.setAttribute("stroke",color);p.setAttribute("stroke-width",width);p.setAttribute("stroke-linecap","round");p.setAttribute("stroke-linejoin","round");svg.append(p)}}
 function adviceDiagram(lines,focus,index,isModel){
  const ns="http://www.w3.org/2000/svg",svg=document.createElementNS(ns,"svg");svg.setAttribute("viewBox","0 0 109 109");svg.setAttribute("role","img");svg.setAttribute("aria-label",isModel?"お手本。青い線に注目":"自分の字。赤い線に注目");addInk(svg,lines,"#56665d");
@@ -566,10 +807,21 @@ function showAdvicePanels(reports,snapshot,chars){
  $("strictContents").replaceChildren();
  reports.forEach((report,i)=>{
  const section=document.createElement("section");section.className="strict-character";const h=document.createElement("h3");h.textContent=(i+1)+"字目「"+chars[i]+"」";section.append(h);
- const tip=document.createElement("p");tip.className="next-goal";tip.textContent=report.text;section.append(tip);
+ const tip=document.createElement("p");tip.className="next-goal";section.append(tip);
+ const category=document.createElement("p");category.className="advice-category";section.append(category);
  const grids=document.createElement("div");grids.className="strict-diagrams";
- for(const model of [false,true]){const box=document.createElement("div"),caption=document.createElement("p");caption.textContent=model?"お手本（青）":"自分の字（赤）";box.append(caption);const lines=model?report.reference:snapshot[i];if(lines.length)box.append(adviceDiagram(lines,report.focus,model?report.focus?.ref:report.focus?.input,model));else{const p=document.createElement("p");p.textContent=model?"お手本の取得ができませんでした":"まだ書いていないよ";box.append(p)}grids.append(box)}
- section.append(grids);
+ function renderFinding(finding){
+ tip.textContent=finding.text;category.textContent=finding.kind==="style"?"書写のヒント（字の誤りとは別です）":finding.kind==="structure"||finding.kind==="point"?"形をたしかめよう":"お手本と見くらべよう";
+ grids.replaceChildren();
+ for(const model of [false,true]){const box=document.createElement("div"),caption=document.createElement("p");caption.textContent=model?"お手本（青）":"自分の字（赤）";box.append(caption);const lines=model?report.reference:snapshot[i];if(lines.length)box.append(adviceDiagram(lines,finding.focus,model?finding.focus?.ref:finding.focus?.input,model));else{const p=document.createElement("p");p.textContent=model?"お手本の取得ができませんでした":"まだ書いていないよ";box.append(p)}grids.append(box)}
+ }
+ renderFinding(report);section.append(grids);
+ if(report.findings?.length>1){
+  const list=document.createElement("details"),summary=document.createElement("summary");summary.textContent="ほかの確認ポイント（全部で"+report.findings.length+"件）";list.append(summary);
+  const buttons=[];
+  report.findings.forEach((finding,j)=>{const button=document.createElement("button");button.type="button";button.className="finding-choice";button.textContent=(j+1)+". "+(finding.kind==="style"?"【書写】":"【確認】")+finding.text;button.setAttribute("aria-pressed",String(j===0));button.onclick=()=>{renderFinding(finding);buttons.forEach((b,k)=>b.setAttribute("aria-pressed",String(k===j)))};buttons.push(button);list.append(button)});section.append(list);
+ }
+ if(report.manualReview?.length){const note=document.createElement("p");note.className="strict-limit";note.textContent=report.manualReview.join(" ");section.append(note)}
  if(report.reference.length){const details=document.createElement("details"),summary=document.createElement("summary");summary.textContent="書き順を見る";details.append(summary);const step=document.createElement("div");step.className="stroke-stepper";const caption=document.createElement("p"),stage=document.createElementNS("http://www.w3.org/2000/svg","svg"),controls=document.createElement("div"),prev=document.createElement("button"),next=document.createElement("button");stage.setAttribute("viewBox","0 0 109 109");prev.textContent="← 前";next.textContent="次 →";let n=0;
  function render(){stage.replaceChildren();addInk(stage,report.reference,"#dee4df");addInk(stage,report.reference.slice(0,n),"#56665d");addInk(stage,[report.reference[n]],"#1769bd",3);const line=sampleArc(report.reference[n],12),start=document.createElementNS("http://www.w3.org/2000/svg","circle");start.setAttribute("cx",line[0].x*100+4.5);start.setAttribute("cy",line[0].y*100+4.5);start.setAttribute("r","2.6");start.setAttribute("fill","#1769bd");stage.append(start);for(const j of [3,7,10]){const p=line[j],a=line[j-1],angle=Math.atan2(p.y-a.y,p.x-a.x),x=p.x*100+4.5,y=p.y*100+4.5;const arrow=document.createElementNS("http://www.w3.org/2000/svg","path");arrow.setAttribute("d","M"+(x-3*Math.cos(angle-.6))+","+(y-3*Math.sin(angle-.6))+"L"+x+","+y+"L"+(x-3*Math.cos(angle+.6))+","+(y-3*Math.sin(angle+.6)));arrow.setAttribute("stroke","#1769bd");arrow.setAttribute("fill","none");stage.append(arrow)}caption.textContent=(n+1)+"画目 / "+report.reference.length+"画。青い点から。";prev.disabled=n===0;next.disabled=n===report.reference.length-1}
  prev.onclick=()=>{if(n>0){n--;render()}};next.onclick=()=>{if(n<report.reference.length-1){n++;render()}};controls.append(prev,next);step.append(caption,stage,controls);details.append(step);section.append(details);render();}
@@ -621,4 +873,5 @@ async function showInlineAnswer(){
  paintInlineAnswer(q,false);
 }
 
+$("styleAdviceToggle").onchange=()=>{state.prefs.styleAdvice=$("styleAdviceToggle").checked;save();invalidateAuto()};
 $("limit").onchange=()=>updateSelection();$("shuffle").onchange=()=>updateSelection();load();applyPreferences();save();renderHome();updateOnlineStatus();</script></body></html>
