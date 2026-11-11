@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="light" name="color-scheme"/>
+<title>かんじの たからばこ｜目視判定・答え確認版</title>
+<style> :root{--ink:#243a48;--muted:#566b77;--bg:#f4f7f3;--teal:#146b63;--green:#e7f3ed;--orange:#974810;--cream:#fff1df;--line:#d4dfd9} *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"BIZ UDPGothic","Yu Gothic",Meiryo,sans-serif;line-height:1.7}button,input,select{font:inherit}button,select{cursor:pointer}button{border:0;border-radius:14px;padding:13px 22px;font-weight:700;background:#fff;color:var(--ink);min-height:48px;line-height:1.5}button:hover:not(:disabled){filter:brightness(.95)}button:disabled{cursor:not-allowed;opacity:.45}:focus-visible{outline:3px solid #3867c4;outline-offset:4px}[hidden]{display:none!important} .wrap{max-width:920px;margin:auto;padding:24px 22px 45px}header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px}.mark{display:grid;place-items:center;background:var(--teal);color:white;border-radius:14px;width:44px;height:44px;font-family:serif;font-size:26px}.brand strong{display:block;font-size:18px;letter-spacing:.04em}.brand small{display:block;font-size:12px;color:var(--muted)}.tag,.eyebrow{font-size:12px;font-weight:bold;letter-spacing:.08em;color:var(--teal)}.tag{background:var(--green);padding:7px 12px;border-radius:20px} h1,h2,p{margin-top:0}h1{font-size:clamp(26px,4.8vw,38px);line-height:1.5;letter-spacing:.03em;margin-bottom:12px}h2{font-size:23px;margin-bottom:12px}.intro{padding:16px 5px 10px}.intro p{color:var(--muted)}.card{background:white;border:1px solid var(--line);border-radius:24px;padding:26px;margin-bottom:20px;box-shadow:0 10px 32px #29483d0a}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 24px}.step{font-size:14px;background:#edf2ed;padding:13px;border-radius:14px}.step b{color:var(--teal);display:block;margin-bottom:3px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}.section-head h2{font-size:18px;margin:0} .ranges{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.range{position:relative;cursor:pointer;display:block}.range input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}.range span{display:flex;flex-direction:column;align-items:center;border:2px solid var(--line);border-radius:16px;padding:12px 6px;pointer-events:none}.range b{font-size:25px}.range small{font-size:12px}.range input:checked+span{background:var(--green);border-color:var(--teal);color:var(--teal)}.range input:checked+span small::before{content:"✓ "}.range input:focus-visible+span{outline:3px solid #3867c4;outline-offset:3px}.options{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:20px 0}.options label{display:flex;gap:8px;align-items:center}.options input{accent-color:var(--teal);width:20px;height:20px}select{border:1px solid var(--line);border-radius:10px;background:white;padding:9px;max-width:100%} .primary{background:var(--teal);color:white}.outline{border:1px solid var(--line);background:white}.orange{background:var(--cream);color:var(--orange);border:1px solid #e6c4a4}.wide{width:100%}.text-btn{background:transparent;font-size:14px;padding:8px 12px;min-height:40px;text-decoration:underline;text-underline-offset:4px}.hint{font-size:13px;color:var(--muted);margin:10px 0 0}.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.row>*{flex:1}.resume{display:flex;gap:14px;align-items:center;justify-content:space-between;background:var(--green);border:1px solid #b5d3c4;padding:18px 22px;border-radius:18px;margin-bottom:20px}.resume p{margin:0;font-size:14px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0 18px}.stat{border-radius:16px;background:#f4f6f4;text-align:center;padding:12px 8px}.stat b{display:block;font-size:29px;line-height:1.4}.stat span{font-size:13px}.stat.good{background:var(--green);color:var(--teal)}.stat.again{background:var(--cream);color:var(--orange)}details{font-size:14px}summary{cursor:pointer;font-weight:bold;min-height:40px;padding:6px 0}details p,details li{color:var(--muted)}details ul{padding-left:22px} .topline{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}.topline strong{font-size:16px}progress{width:100%;height:10px;border:0;border-radius:8px;overflow:hidden;background:#dfe8e0;display:block;margin:0 0 18px}progress::-webkit-progress-bar{background:#dfe8e0}progress::-webkit-progress-value{background:var(--teal);border-radius:8px}progress::-moz-progress-bar{background:var(--teal)}.q-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.pill{font-size:12px;padding:4px 10px;border-radius:9px;background:#eff3f0;color:var(--muted);font-weight:bold}.instruction{color:var(--muted);font-size:14px;margin:15px 0 10px}.sentence{font-size:clamp(24px,4.5vw,34px);line-height:2.35;font-weight:600;overflow-wrap:anywhere;margin:8px 0 18px}.reading{display:inline-block;color:var(--teal);background:var(--green);border-bottom:3px solid var(--teal);border-radius:9px 9px 0 0;padding:0 12px;margin:0 4px;line-height:1.75}rt{font-size:.42em;font-weight:400}.write-head{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px;margin-bottom:8px;color:var(--muted)}.write-head button{font-size:12px;padding:7px 12px;min-height:36px}.writing{border:1px solid #b6c7bf;border-radius:14px;overflow:hidden;background:white}canvas{display:block;width:100%;height:180px;touch-action:none;cursor:crosshair}.answer-area{background:#f4f7f3;border-radius:16px;padding:16px 20px;margin-top:18px}.answer-area small{font-weight:bold;color:var(--teal)}.answer-text{font-family:"UD Digi Kyokasho N-R","Yu Kyokasho","BIZ UDPMincho","Yu Mincho",serif;font-size:clamp(40px,7vw,58px);line-height:1.6;letter-spacing:.12em;overflow-wrap:anywhere}.answer-area p{margin:3px 0 0;font-size:13px;color:var(--muted)}.actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.actions button{font-size:18px}.reveal-actions{display:flex;gap:10px;align-items:center;margin-top:18px}.reveal-actions .primary{flex:1;font-size:18px}.bottomline{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;color:var(--muted)}.bottomline p{margin:0} .result-title{text-align:center;padding:10px 0}.result-symbol{font-size:35px;color:var(--teal);background:var(--green);width:72px;height:72px;border-radius:50%;display:grid;place-items:center;margin:0 auto 16px}.result-title p{color:var(--muted);margin-bottom:0}.result-list{list-style:none;margin:12px 0 0;padding:0;max-height:360px;overflow:auto}.result-list li{padding:14px 4px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:center}.result-list strong{font-size:23px;font-family:"Yu Mincho",serif}.result-list small{display:block;color:var(--muted);font-size:12px}.retry-label{color:var(--orange);font-size:12px;white-space:nowrap}.notice{padding:12px 16px;background:var(--cream);color:var(--orange);border:1px solid #dfc2a6;border-radius:12px;margin-bottom:18px;font-size:13px}footer{color:var(--muted);font-size:12px;text-align:center;margin-top:24px}dialog{border:1px solid var(--line);border-radius:22px;max-width:440px;width:calc(100% - 32px);padding:26px;color:var(--ink)}dialog::backdrop{background:#1c302c80}dialog h2{font-size:20px}dialog p{font-size:14px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0} @media(max-width:600px){.wrap{padding:16px 14px 28px}header{margin-bottom:16px}.brand strong{font-size:15px}.brand small{font-size:10px}.tag{font-size:11px;padding:5px 9px}.card{padding:19px 16px;border-radius:20px}.steps{gap:7px}.step{padding:10px;font-size:12px}.ranges{gap:6px}.range b{font-size:23px}.range span{padding:10px 3px}.range small{font-size:10px}.resume{padding:14px;align-items:stretch;flex-direction:column}.sentence{margin-bottom:14px}.actions button{padding:14px 8px;font-size:17px}.reveal-actions{flex-direction:column;align-items:stretch}.options{gap:12px;font-size:14px}.bottomline{align-items:flex-start}.write-head{font-size:12px}.write-head button{padding:6px 8px}canvas{height:165px}} .mode-switch{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}.mode-switch button{border:2px solid var(--line);background:white;text-align:left;padding:14px 16px}.mode-switch button[aria-pressed="true"]{border-color:var(--teal);background:var(--green);color:var(--teal)}.mode-switch small{display:block;font-weight:normal;font-size:12px;margin-top:4px}.study-mode{margin:16px 0 8px}.study-mode button{text-align:center;padding:10px}.sort-note{padding:13px 16px;background:var(--green);border-radius:12px;color:var(--teal);font-size:14px;margin-bottom:16px}.review-choice{margin:18px 0 10px}.review-choice button{margin-top:10px}@media(max-width:420px){.mode-switch button{font-size:14px;padding:12px 10px}.actions button{font-size:15px}} #study,#study *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none} .writing,#canvas{touch-action:none;overscroll-behavior:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-user-drag:none} #canvas{-webkit-tap-highlight-color:transparent} .online-box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 20px;margin-bottom:20px}.online-box p{margin:6px 0;font-size:13px}.asset-status{font-size:13px;font-weight:bold;background:#fff1df;color:#974810;padding:6px 10px;border-radius:9px;display:inline-block}.asset-status.ready{background:var(--green);color:var(--teal)}.online-box .topline{flex-wrap:wrap}.online-box pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;max-height:220px;overflow:auto} #characterSlots{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.char-slot{border:2px solid var(--line);padding:8px 14px}.char-slot[aria-pressed="true"]{background:var(--green);border-color:var(--teal);color:var(--teal)} .writing{width:100%;margin:0 auto}#canvas{width:100%;height:auto;aspect-ratio:4/1}#characterSlots,#nextChar{display:none!important}.write-head{flex-wrap:wrap}.auto-tools{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}.auto-tools button{flex:1}.auto-result{margin:18px 0;padding:18px;border:2px solid #afcdbf;border-radius:16px;background:#f4faf6}.candidate-row{margin:12px 0;display:flex;align-items:center;gap:6px;flex-wrap:wrap}.candidate{padding:5px 12px;min-width:44px;font-size:24px;border:2px solid var(--line)}.candidate[aria-pressed="true"]{border-color:var(--teal);background:var(--green)}#modelGlyphs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}#modelGlyphs svg{width:104px;height:104px;background:white;border:1px solid var(--line);border-radius:10px}.missing-glyph{font-size:16px;background:var(--cream);padding:12px}.answer-text{font-size:24px;letter-spacing:.05em}.bridge-box{position:absolute;left:0;top:0;width:256px;height:256px;opacity:0;pointer-events:none;z-index:-100;overflow:hidden}.bridge-box canvas{width:256px!important;height:256px!important;aspect-ratio:auto}.license-copy{font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere} .mode-switch button{position:relative;font-size:19px;min-height:64px;border-width:3px;text-align:center} .mode-switch button[aria-pressed="true"]{background:#146b63!important;color:#fff!important;border-color:#146b63!important;box-shadow:0 3px 0 #0b4943} #homeModeSummary{text-align:center;color:var(--teal);font-weight:700;margin:8px 0 0;font-size:16px} #connectionDetails{margin:16px 0}.online-box{margin:0;border:0;padding:6px 0;box-shadow:none} body[data-view="study"] .wrap{max-width:1000px;padding:10px 20px 12px} body[data-view="study"] .wrap>header,body[data-view="study"] .wrap>footer,body[data-view="study"] #connectionDetails,body[data-view="study"] #licenseDetails,body[data-view="study"] #storageWarning{display:none!important} #study .topline{height:48px;margin:0 0 6px;gap:8px;display:grid;grid-template-columns:1fr auto 1fr} #study .study-nav{display:flex;align-items:center;gap:6px;justify-content:flex-end} #study .topline button{font-size:16px;min-height:44px;padding:8px 12px;white-space:nowrap;text-decoration:none} #study #backBtn{justify-self:start}#study #progressText{font-size:17px;text-align:center} #study #progress{height:5px;margin:0 0 8px} #study>.card{padding:12px 18px 14px;margin:0;border-radius:20px;box-shadow:none} #study .sentence{font-size:clamp(26px,3.7vw,36px);line-height:1.9;min-height:78px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;margin:0 0 6px;gap:0;font-weight:600;text-align:center} #study .reading{line-height:1.65;padding:0 10px} #study .q-meta,#study .instruction,#study #sortNote,#study #recognitionHelp,#study #characterSlots,#study #gradeHint,#study .bottomline,#study #answerHint,#study #modelCaption,#study #answer{display:none!important} #study #writingPanel>.hint,#study .write-head>span:not(#slotCaption),#study .auto-tools{display:none!important} #study .write-head{height:44px;flex-wrap:nowrap;margin:0 0 6px;justify-content:space-between;gap:8px} #study .write-head button{min-height:42px;padding:8px 14px;font-size:16px;white-space:nowrap} #study #slotCaption{color:var(--muted);font-size:16px;font-weight:500;margin:0} #study .writing{width:min(100%,880px);margin:0 auto;border-radius:10px;border-color:#9caf9f} #study #canvas{width:100%;height:auto;aspect-ratio:4/1} #reviewShelf{min-height:132px;display:flex;flex-direction:column;justify-content:center;gap:4px;margin:8px 0;position:relative} #idlePrompt{font-size:19px;text-align:center;color:#677c70;margin:0} #study[data-inking="true"] #idlePrompt{visibility:hidden} #study #autoResult{border:0;background:transparent;padding:0;margin:0;text-align:center;line-height:1.5;font-size:16px} #study #autoMessage{font-size:17px;font-weight:600;display:block;overflow-wrap:anywhere} #study .answer-area{padding:0;margin:0;background:transparent;text-align:center} #study .answer-area>small{display:none} #study #modelGlyphs{justify-content:center;gap:8px;margin:2px 0} #study #modelGlyphs svg{width:80px;height:80px;border-color:#c0d3c7} #study .missing-glyph{font-size:27px;padding:9px 12px;min-width:62px} #study #glyphFallbackNote{font-size:14px;color:var(--orange);margin:0;text-align:center} #candidateAdjust{font-size:15px;padding:7px 12px;min-height:38px;align-self:center;background:transparent;color:var(--teal);text-decoration:underline;text-underline-offset:3px} #actionDock{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:stretch;min-height:56px;margin-top:4px} #actionDock button{font-size:19px;min-height:54px;padding:12px 10px;line-height:1.35} #actionDock #revealActions,#actionDock #gradeActions,#actionDock #autoConfirmBar{display:contents} #actionDock #unknownBtn{display:none!important} #study[data-mode="write"][data-phase="write"] #autoCheckBtn{grid-column:span 2} #study[data-mode="write"][data-phase="write"] #revealBtn{font-size:17px;border:1px solid var(--line);text-decoration:none} #study[data-mode="sort"][data-phase="write"] #revealBtn{font-size:16px;border:1px solid var(--line);text-decoration:none} #study[data-mode="sort"] #reviewShelf{min-height:200px} #study[data-mode="sort"] #modelGlyphs svg{width:100px;height:100px} #study[data-mode="sort"][data-phase="review"] #gradeActions button{grid-column:auto} #study[data-mode="sort"][data-phase="review"] #actionDock{grid-template-columns:1fr 1fr} #study[data-checking="true"] #autoCheckBtn{opacity:.7} #studyOptions,#candidateDialog{max-width:620px;width:calc(100% - 32px);max-height:calc(100dvh - 32px);overflow:auto;padding:24px} .dialog-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.dialog-head h2{margin:0;font-size:22px}.dialog-head button{border:1px solid var(--line);min-height:44px;padding:8px 16px} #studyOptions p{font-size:16px;margin:10px 0}#studyOptions .mode-switch{margin:16px 0} #candidateDialog #candidateRows{display:grid;grid-template-columns:1fr 1fr;gap:12px} #candidateDialog .candidate-row{margin:0;border:1px solid var(--line);border-radius:14px;padding:12px;gap:6px;justify-content:center} #candidateDialog .candidate-row>span{width:100%;font-size:16px} #candidateDialog .candidate{font-size:27px;min-width:52px;min-height:52px;padding:6px 10px} #candidateDialog .candidate[aria-pressed="true"]{background:var(--teal);color:white;border-color:var(--teal)} #candidateDialog #autoCaution{font-size:14px;margin-top:18px} #focusConnection{padding:10px 12px;border-radius:12px;background:var(--green);font-size:16px} @media(min-width:700px){#study .writing{max-width:min(880px,calc((100svh - 390px)*4));max-width:min(880px,calc((100dvh - 390px)*4))}} @media(max-width:699px){body[data-view="study"] .wrap{padding:6px 10px 10px}#study>.card{padding:8px 10px 12px}#study .topline button{padding:8px;font-size:14px}#study .topline{gap:4px}#study .sentence{font-size:26px;min-height:88px}#study .write-head button{font-size:14px;padding:8px 10px}#study #slotCaption{font-size:14px}#study #modelGlyphs{gap:4px}#study #modelGlyphs svg{width:66px;height:66px}#actionDock{gap:6px}#actionDock button{font-size:16px;padding:12px 6px}#reviewShelf{min-height:126px}#candidateDialog #candidateRows{grid-template-columns:1fr}#study[data-mode="sort"] #modelGlyphs svg{width:70px;height:70px}} @media(min-width:700px) and (max-height:580px){#study .sentence{min-height:62px;font-size:28px;line-height:1.7}#study>.card{padding-top:6px}#reviewShelf{min-height:108px;margin:4px 0}#study #modelGlyphs svg{width:62px;height:62px}#study .writing{max-width:min(800px,calc((100dvh - 340px)*4))}#actionDock button{min-height:48px;padding:10px 8px}#study .topline{height:44px}#study #progress{margin-bottom:4px}} body[data-view="study"] .wrap{padding-top:8px} #study .topline{height:44px;margin-bottom:4px} #study #progress{margin-bottom:6px} #study>.card{padding-top:10px;padding-bottom:12px} #study .sentence{min-height:68px;margin-bottom:4px} #study .write-head{height:42px;margin-bottom:4px} #reviewShelf{min-height:120px;margin:6px 0} #study #autoResult{display:flex;align-items:center;justify-content:center;gap:10px;min-height:34px} #study #autoMessage{flex:0 1 auto;font-size:17px} #candidateAdjust{white-space:nowrap;min-height:38px;padding:6px 8px;font-size:14px;flex:0 0 auto} #study #modelGlyphs svg{width:70px;height:70px} #actionDock{min-height:52px;margin-top:2px} #actionDock button{min-height:52px;padding:10px} @media(min-width:700px){#study .writing{max-width:min(880px,max(480px,calc((100svh - 420px)*4)));max-width:min(880px,max(480px,calc((100dvh - 420px)*4)))}} @media(max-width:699px){#study .sentence{min-height:80px}#reviewShelf{min-height:128px}#study #modelGlyphs svg{width:62px;height:62px}#study #autoMessage{font-size:15px}#candidateAdjust{font-size:13px}#actionDock button{font-size:16px;padding:10px 6px}} #strictDialog{max-width:800px;width:calc(100% - 24px);max-height:calc(100dvh - 24px);overflow:auto;padding:22px} #strictDialog .dialog-head{position:sticky;top:-22px;background:white;padding:12px 0;z-index:1} .strict-character{border-top:1px solid var(--line);padding:16px 0}.strict-character h3{font-size:24px;margin:0 0 10px}.strict-diagrams{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:center}.strict-diagrams svg{width:100%;max-width:220px;height:auto;border:1px solid var(--line);background:#fcfdfb;border-radius:12px}.strict-diagrams p{margin:0 0 8px;font-weight:700}.strict-checks{padding-left:20px;font-size:16px}.strict-checks li{margin:7px 0}.strict-review{color:#974810}.strict-ok{color:#146b63}.stroke-stepper{border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center}.stroke-stepper p{font-size:16px}.stroke-stepper button{border:1px solid var(--line);margin:0 5px}.strict-limit{font-size:14px;color:var(--muted)}#strictDetailsBtn{display:none!important}#candidateAdjust{display:none!important}#study #autoMessage{font-size:16px;line-height:1.4} #reviewChoiceNote{text-align:center;font-size:16px;margin:0;color:var(--muted)} #reviewShelf{min-height:158px}#manualChoiceBtn{align-self:center;min-height:38px;font-size:15px;padding:6px 12px;background:transparent;color:var(--teal);text-decoration:underline;text-underline-offset:3px} #actionDock #writeAgainBtn{font-size:16px}#actionDock #commitAuto{font-size:18px}#selfAgainBtn{font-size:17px!important} #study .writing{max-width:min(880px,max(480px,calc((100dvh - 455px)*4)))} .next-goal{background:#e7f3ed;border-radius:14px;padding:16px;color:#165b4e;font-size:19px;line-height:1.8} .detail-decisions{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:sticky;bottom:-22px;background:white;padding:14px 0}.detail-decisions button{font-size:18px;min-height:52px} #strictDialog details{font-size:14px;margin:12px 0}#strictDialog details summary{color:var(--muted)} @media(max-width:699px){#reviewShelf{min-height:160px}#reviewChoiceNote{font-size:14px}#actionDock #commitAuto,#selfAgainBtn{font-size:15px!important}#actionDock #writeAgainBtn{font-size:14px}.detail-decisions button{font-size:16px}} #actionDock{grid-template-columns:repeat(3,minmax(0,1fr))!important}#study #autoCheckBtn{grid-column:auto!important;background:#fff!important;color:var(--teal)!important;border:2px solid var(--teal)}#study #revealBtn,#study #unknownBtn,#study #manualChoiceBtn,#study #reviewChoiceNote,#study #autoResult,#study #writeAgainBtn{display:none!important}#reviewShelf{min-height:46px!important;margin:6px 0!important}#study #idlePrompt{font-size:17px}#study .writing{max-width:min(880px,max(480px,calc((100dvh - 345px)*4)))}#actionDock button{font-size:19px!important}#strictDialog .strict-diagrams svg{width:100%;max-width:260px;height:auto}#strictDialog .next-goal{font-size:21px;line-height:1.6}#strictDialog .stroke-stepper svg{width:220px;max-width:100%;height:auto}.advice-answer{font-size:30px;text-align:center}.strict-character details{margin-top:12px}@media(max-width:699px){#actionDock button{font-size:16px!important;padding:12px 5px}#study .writing{max-width:100%}}
+#study #revealBtn{display:inline-block!important;font-size:17px;padding:9px 20px;min-height:44px;color:var(--teal);border:2px solid var(--teal);background:#fff;text-decoration:none}
+.inline-answer-tools{text-align:center;margin:4px 0}#study #answerArea{margin:8px 0;padding:10px;background:#edf5ef;border-radius:12px}#study #answerArea>small{display:block;font-size:15px}#study #answer{display:block!important;font-size:32px;line-height:1.5;margin:4px 0}#study #answer[hidden]{display:none!important}#study #modelGlyphs{display:flex;justify-content:center;gap:6px;margin:4px 0}#study #modelGlyphs svg{width:76px;height:76px}#study #glyphFallbackNote{font-size:13px;margin:4px 0;color:var(--orange)}#study .writing{max-width:min(880px,max(480px,calc((100dvh - 455px)*4)))}
+@media(max-width:699px){#study .writing{max-width:100%}#study #modelGlyphs svg{width:60px;height:60px}#study #revealBtn{font-size:16px}}
+</style>
+</head>
+<body><div class="wrap">
+<header><div class="brand"><span aria-hidden="true" class="mark">字</span><div><strong>かんじの たからばこ</strong><small>小学３年生 ・ 国語のれんしゅう</small></div></div><span class="tag">41〜45</span></header>
+<div class="notice" hidden="" id="storageWarning" role="status">このブラウザーでは、きろくを保存できません。今はれんしゅうできますが、とじるときろくが消えます。</div>
+<main>
+<section id="home">
+<div class="intro"><div class="eyebrow">まいにち、ひとつずつ。</div><h1>見て、えらんで、<br/>漢字を しわけよう。</h1><p>文を見て「書けるかな？」を考えよう。<br/>書きたいときだけ、書いてれんしゅうできるよ。</p></div>
+<div class="steps"><div class="step"><b>① 文を見る</b>漢字を 思いうかべよう</div><div class="step"><b>② すぐ しわけ</b>書ける？ まだむずかしい？</div><div class="step"><b>③ ふごうかく</b>えらべば 書くことも OK</div></div>
+<div class="resume" hidden="" id="resumeBox"><div><strong>つづきから できるよ</strong><p id="resumeInfo"></p></div><button class="primary" id="resumeBtn">つづきを やる →</button></div>
+<section aria-labelledby="rangeTitle" class="card"><div class="section-head"><h2 id="rangeTitle">れんしゅうする ところ</h2><button class="text-btn" id="selectAll">ぜんぶ えらぶ</button></div><div class="ranges" id="ranges"></div><p style="margin:20px 0 4px;font-weight:bold">やりかたを えらぼう</p><div aria-label="れんしゅうのやりかた" class="mode-switch" role="group"><button aria-pressed="true" id="homeSortMode">見るだけで しわけ<small>きほんのモード ・ 書かなくて OK</small></button><button aria-pressed="false" id="homeWriteMode">書いて れんしゅう<small>紙や画面に 書いてたしかめる</small></button></div><p aria-live="polite" id="homeModeSummary"></p><div class="options"><label>もんだいの数 <select id="limit"><option value="all">えらんだところを ぜんぶ</option><option value="10">10もんずつ</option><option value="20">20もんずつ</option></select></label><label><input id="shuffle" type="checkbox"/>じゅんばんを まぜる</label></div><button class="primary wide" id="startBtn">はじめる →</button><p class="hint" id="selectionInfo"></p></section>
+<section aria-labelledby="recordTitle" class="card"><div class="section-head"><h2 id="recordTitle">これまでの きろく</h2><span class="hint" style="margin:0">全100もん</span></div><div class="stats"><div class="stat good"><b id="masteredCount">0</b><span>書ける</span></div><div class="stat again"><b id="reviewCount">0</b><span>ふごうかく</span></div><div class="stat"><b id="newCount">100</b><span>まだ</span></div></div><button class="orange wide" id="homeReview">「ふごうかく」だけ れんしゅう →</button><p class="hint">ここからは、41〜45ぜんぶの「ふごうかく」をれんしゅうするよ。</p></section>
+<details class="card" id="connectionDetails"><summary>接続の状態・くわしい設定</summary><section aria-label="ネット接続と準備の状態" class="online-box"><div class="topline"><strong>お手本の接続状態</strong><button class="outline" id="retryOnline">お手本を再読込</button></div><div class="row"><span class="asset-status" id="engineStatus" role="status">認識の準備中…</span><span class="asset-status" id="glyphStatus" role="status">お手本は必要なときに取得</span></div><p id="networkHint">起動時に認識辞書とお手本を取得します。準備中でも見るだけ・自己判定は使えます。</p><details><summary>接続の記録</summary><pre id="onlineLog"></pre><p>端末・Canvaでの表示と助言精度は実機未検証です。</p></details></section></details><details class="card"><summary>先生・おうちの方へ</summary><p>41〜45の全100問。基本は見るだけの仕分け。書くときは左から1マス1文字、送りがなも書きます。「ごうかく」「ふごうかく」は児童が選びます。「答えをかくにん」で書く欄の下に答え・お手本を表示します。「アドバイス」では機械の助言と比較図を開きます。</p><p>助言は一字につき最大一つ。画の対応を全体で取り直してから比較するため、順番や一本のずれを理由に後の画すべてを誤り扱いしません。小さなゆれや長さの差は広めに許容します。田・由などの突き出し、画数差、特に大きな位置の差に注目します。これは精度が保証された採点ではなく、誤助言もあります。筆順の違いだけで合否は決めません。</p><p>画数は指やペンを置いてから離すまでを一画として数えます。誤タッチは「1つもどす」で消せます。画数が違う場合は誤った画を推測で指ささず、数だけ案内します。</p><p>仕分けと進行は同じブラウザー内に保存します。筆跡は再読込すると消えます。共有端末では利用者の交代時に記録を消してください。通信はお手本の取得だけで、筆跡や記録は送信しません。配信元には通常の接続情報が伝わります。Canva内の制限で取得できない場合も、自己判定は使えます。</p><button class="outline" id="resetBtn">きろくを ぜんぶ消す</button></details></section>
+<section aria-labelledby="studyTitle" hidden="" id="study"><h1 class="sr-only" id="studyTitle" tabindex="-1">漢字のれんしゅう</h1>
+<div class="topline"><button class="text-btn" id="backBtn">← もどる</button><strong id="progressText"></strong><div class="study-nav"><button aria-label="設定と使い方" class="outline" id="openOptions">設定</button><button class="text-btn" id="pauseBtn">ホーム</button></div></div><progress aria-label="れんしゅうの進みぐあい" id="progress" max="100" value="0"></progress>
+<article class="card"><div class="q-meta"><span class="pill" id="qLocation"></span><span class="pill" id="modeBadge"></span></div><p class="instruction" id="questionInstruction"></p><div class="sentence" id="sentence"></div>
+<div hidden="" id="writingPanel"><p class="hint" id="recognitionHelp"></p><div aria-label="書く文字をえらぶ" id="characterSlots"></div><div class="write-head"><p class="hint" id="slotCaption"></p><div><button aria-label="手書きの線をひとつもどす" class="outline" id="undoStroke">１つもどす</button> <button class="outline" id="clearCanvas">ぜんぶ消す</button></div></div><div class="writing"><canvas aria-label="漢字を書く欄。キーボードを使う場合は紙に書いてください。" draggable="false" height="220" id="canvas" width="880"></canvas></div><p class="hint">送りがなも わすれずに。自分で こたえあわせするよ。<br/>画面を動かしたいときは、書くわくの外を なぞってね。</p><div class="auto-tools"><button class="outline" id="nextChar">つぎの文字へ →</button></div></div><p class="sort-note" id="sortNote">書かなくて OK！ 頭の中で漢字を思いうかべて、下のボタンで しわけよう。</p>
+<p class="hint" hidden="" id="gradeHint"></p>
+<div id="reviewShelf"><div class="inline-answer-tools"><button aria-controls="answerArea" aria-expanded="false" class="outline" id="revealBtn">答えをかくにん</button></div><div aria-live="polite" class="answer-area" hidden="" id="answerArea"><small>こたえ</small><div class="answer-text" id="answer"></div><div id="modelGlyphs"></div><p class="hint" id="modelCaption"></p><p id="answerHint"></p><p hidden="" id="glyphFallbackNote"></p></div><p id="idlePrompt">書けたら チェック</p><div aria-live="polite" class="auto-result" hidden="" id="autoResult"><strong id="autoMessage"></strong><button aria-haspopup="dialog" hidden="" id="candidateAdjust">読取りを直す</button><button class="text-btn" hidden="" id="strictDetailsBtn">直すところ</button></div><button class="outline" id="manualChoiceBtn">自分で判定</button><p hidden="" id="reviewChoiceNote">お手本と見くらべて、自分でえらぼう。</p></div><div id="actionDock"><div class="reveal-actions" id="revealActions"><button class="primary" disabled="" id="autoCheckBtn">書いた字を 自動チェック</button><button class="outline" id="unknownBtn">まだ わからない</button></div><button class="outline" hidden="" id="writeAgainBtn">書きなおす</button><div hidden="" id="autoConfirmBar"><button class="orange" id="selfAgainBtn">あとで練習 →</button><button class="primary wide" hidden="" id="commitAuto">この判定で 次へ</button></div><div class="actions" hidden="" id="gradeActions"><button class="orange" id="againBtn">△ ふごうかく</button><button class="primary" id="goodBtn">○ 書けた！</button></div></div></article><div class="bottomline"><p aria-live="polite" id="sessionStats"></p></div></section>
+<section aria-labelledby="resultTitle" hidden="" id="results"><div class="card"><div class="result-title"><div aria-hidden="true" class="result-symbol">✓</div><h1 id="resultTitle" tabindex="-1">よく がんばったね！</h1><p id="resultMessage"></p></div><div class="stats"><div class="stat"><b id="resultTotal"></b><span>とりくんだ</span></div><div class="stat good"><b id="resultGood"></b><span>書ける</span></div><div class="stat again"><b id="resultAgain"></b><span>ふごうかく</span></div></div><div class="review-choice"><button class="orange wide" id="retryBtn"></button><button class="primary wide" id="retryWriteBtn"></button></div><button class="text-btn wide" id="resultBack">← さいごの しわけを なおす</button><button class="outline wide" id="homeBtn" style="margin-top:12px">はじめの画面へ</button></div><details class="card" id="missedDetails"><summary id="missedSummary"></summary><ul class="result-list" id="missedList"></ul></details></section>
+<details class="card" id="licenseDetails"><summary>お手本の出典</summary><p><a href="https://kanjivg.tagaini.net/" rel="noopener noreferrer" target="_blank">KanjiVG</a> © 2009–2026 Ulrich Apel。<a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 3.0</a>。SVGから線の形と順番を抽出し、比較用の線・番号・色・丸印を付けて表示しています。字形・派生データにも同ライセンスを適用します。教科書体を元にした線画であり、市販教科書体フォントそのものではありません。配信元はcdn.jsdelivr.net、raw.githubusercontent.com（KanjiVG master）。各配布元による公認を意味しません。</p></details></main><footer>かんじの たからばこ ｜ 41〜45 ・ 100もん<br/>v10・目で見て判定・答え確認版（iPad対策入り）<br/><span id="saveNote">きろくは このブラウザーに 自動で保存されます。</span></footer>
+</div><dialog aria-labelledby="dialogTitle" id="confirmDialog"><h2 id="dialogTitle"></h2><p id="dialogMessage"></p><div class="row"><button class="outline" id="cancelDialog">やめる</button><button class="primary" id="confirmAction">つづける</button></div></dialog><noscript><p class="notice">ブラウザーの JavaScript を有効にしてください。</p></noscript>
+<dialog aria-labelledby="optionsTitle" id="studyOptions"><div class="dialog-head"><h2 id="optionsTitle">れんしゅうの設定</h2><button id="closeOptions">とじる</button></div><div id="focusModeChoices"><div aria-label="このれんしゅうのやりかた" class="mode-switch study-mode" role="group"><button aria-pressed="true" id="studySortMode">見るだけで しわけ</button><button aria-pressed="false" id="studyWriteMode">✎ 書いて れんしゅう</button></div></div><p id="focusConnection" role="status"></p><p hidden="" id="focusSaveWarning">今はきろくを保存できません。</p><p id="focusQuestionInfo"></p><p>左から1マスに1文字。書けたら「ごうかく」、練習したいなら「ふごうかく」。「答えをかくにん」で下にお手本が出るよ。</p></dialog><dialog aria-labelledby="candidateTitle" id="candidateDialog"><div class="dialog-head"><h2 id="candidateTitle">読みとった字を直す</h2><button id="closeCandidates">とじる</button></div><div id="candidateContent"><div id="candidateRows"></div><p class="hint" id="autoCaution"></p></div></dialog><dialog aria-labelledby="strictTitle" id="strictDialog"><div class="dialog-head"><h2 id="strictTitle">お手本とアドバイス</h2><button id="closeStrict">とじる</button></div><p>赤い「ここ！」を、青いお手本とくらべよう。自分でえらんで次へ進めるよ。</p><p class="advice-answer" id="adviceAnswer"></p><div id="strictContents"></div><p class="strict-limit">機械の助言はまちがうこともあります。合否は決めません。気になるときは先生と見てね。</p><div class="detail-decisions"><button class="orange" id="detailAgainBtn">ふごうかく →</button><button class="primary" id="detailGoodBtn">ごうかく →</button></div></dialog><script>"use strict";
+const RAW={
+41:[
+["","りょうあし","両足","を{出|だ}す。"],
+["ゲームで","まける","負ける","。"],
+["{図書|としょ}","かかり","係","になる。"],
+["","ぜんいん","全員","にくばる。"],
+["ひな","まつり","祭り","。"],
+["{細|こま}かい","さぎょう","作業","。"],
+["うすい","てっぱん","鉄板","。"],
+["","でんちゅう","電柱","のかげ。"],
+["","せきゆ","石油","の{利用|りよう}。"],
+["","くうこう","空港","に{行|い}く。"],
+["","くすり","薬","をのむ。"],
+["","ふえ","笛","をふく。"],
+["","ちゅうもく","注目","する。"],
+["","わるい","悪い","{予感|よかん}。"],
+["","にんきもの","人気者","。"],
+["","しょうぶ","勝負","をいどむ。"],
+["","きんこ","金庫","を{開|あ}ける。"],
+["","でんぱ","電波","を{出|だ}す。"],
+["テレビの","ほうそう","放送","。"],
+["{算数|さんすう}の","べんきょう","勉強","。"]
+],
+42:[
+["","よそう","予想","が{当|あ}たる。"],
+["{白黒|しろくろ}の","しゃしん","写真","。"],
+["","ぎょうれつ","行列","ができる。"],
+["","ち","血","が{出|で}る。"],
+["{空|そら}が","くらく","暗く","なる。"],
+["","はし","橋","がかかる。"],
+["へやが","あつい","暑い","。"],
+["","さむい","寒い","{朝|あさ}。"],
+["{荷物|にもつ}が","かるい","軽い","。"],
+["","いのち","命","をまもる。"],
+["{安全|あんぜん}","だいいち","第一","。"],
+["{書|か}き","うつす","写す","。"],
+["","まふゆ","真冬","の{気温|きおん}。"],
+["","けつ","血","えきがた。"],
+["{詩|し}を","あんき","暗記","する。"],
+["","ほどうきょう","歩道橋","。"],
+["","しょちゅう","暑中","みまい。"],
+["","かんちゅう","寒中","みまい。"],
+["","てがる","手軽","な{朝食|ちょうしょく}。"],
+["{矢|や}が","めいちゅう","命中","する。"]
+],
+43:[
+["{本|ほん}を","かえす","返す","。"],
+["{店|みせ}の","しゅじん","主人","。"],
+["","きゅうしゅう","九州","に{住|す}む。"],
+["","こや","小屋","をたてる。"],
+["{木|き}の","ね","根","っこ。"],
+["おもい","にもつ","荷物","。"],
+["しぜんを","まもる","守る","。"],
+["","やくめ","役目","をはたす。"],
+["","だいず","大豆","を{食|た}べる。"],
+["{元気|げんき}に","そだつ","育つ","。"],
+["{手|て}の","しょう","消","どく。"],
+["{本|ほん}を{手|て}に","とる","取る","。"],
+["{新学|しんがっ}","き","期","の{行事|ぎょうじ}。"],
+["","はなばたけ","花畑","に{行|い}く。"],
+["{一日|いちにち}が","おわる","終わる","。"],
+["{手紙|てがみ}の","へんじ","返事","。"],
+["{川|かわ}の","ぬし","主","。"],
+["","まめ","豆","をにる。"],
+["","たいいく","体育","の{時間|じかん}。"],
+["{火|ひ}を","けす","消す","。"]
+],
+44:[
+["","ふく","福","ぶくろを{買|か}う。"],
+["{家|いえ}へ","いそぐ","急ぐ","。"],
+["{弟|おとうと}が","おきる","起きる","。"],
+["","く","苦","{労|ろう}する。"],
+["{友|とも}だちを","まつ","待つ","。"],
+["ざつ","だん","談","をする。"],
+["","はなぢ","鼻血","が{出|で}る。"],
+["","はぐるま","歯車","が{回|まわ}る。"],
+["へやの","ちゅうおう","中央","。"],
+["","かい","階","だんを{下|お}りる。"],
+["","いいんかい","委員会","。"],
+["","どうきゅうせい","同級生","。"],
+["","しょうわ","昭和","{六十年|ろくじゅうねん}。"],
+["","えき","駅","に{行|い}く。"],
+["みかんの","かわ","皮","。"],
+["","さら","皿","をかさねる。"],
+["","たんか","短歌","をよむ。"],
+["","にがい","苦い","コーヒー。"],
+["","きたい","期待","する。"],
+["","みじかい","短い","ひも。"]
+],
+45:[
+["","いき","息","をすう。"],
+["","うつくしい","美しい","ながめ。"],
+["ろうかで","ころぶ","転ぶ","。"],
+["","びょうき","病気","がなおる。"],
+["","はいしゃ","歯医者","。"],
+["{水|みず}を","のむ","飲む","。"],
+["{荷物|にもつ}が","おもい","重い","。"],
+["","しんぱい","心配","をかける。"],
+["おふろの","おんど","温度","。"],
+["","しあわせ","幸せ","なくらし。"],
+["{外国|がいこく}との","こうりゅう","交流","。"],
+["","かぞく","家族","{旅行|りょこう}。"],
+["{虫|むし}が","せいそく","生息","する。"],
+["こまの","かいてん","回転","。"],
+["","やまい","病","をなおす。"],
+["","いんしょくてん","飲食店","。"],
+["","じゅうだい","重大","な{出来事|できごと}。"],
+["おり{紙|がみ}を","くばる","配る","。"],
+["","こうふく","幸福","になる。"],
+["{川|かわ}が","ながれる","流れる","。"]
+]};
+const QUESTIONS=Object.entries(RAW).flatMap(([page,rows])=>rows.map((r,i)=>({id:`${page}-${i<10?1:2}-${i%10+1}`,page:Number(page),group:i<10?1:2,n:i%10+1,before:r[0],reading:r[1],answer:r[2],after:r[3]})));
+const BY_ID=new Map(QUESTIONS.map(q=>[q.id,q])), KEY="kanji-takarabako-41-45-v1", $=id=>document.getElementById(id);
+const defaultState=()=>({version:1,records:{},session:null,prefs:{pages:[41,42,43,44,45],limit:"all",shuffle:false,style:"sort"}});
+let state=defaultState(),visibleAnswer=false,gradeLocked=false,dialogCallback=null,answerUnknown=false,focusManual=false;
+function validRecord(r){return r&&(r.status==="good"||r.status==="again")&&Number.isInteger(r.attempts)&&r.attempts>=1}
+function load(){try{const raw=localStorage.getItem(KEY);if(!raw)return;const x=JSON.parse(raw);if(x.version!==1)throw Error("version");state.records=Object.fromEntries(Object.entries(x.records||{}).filter(([id,r])=>BY_ID.has(id)&&validRecord(r)));if(x.prefs){state.prefs.pages=Array.isArray(x.prefs.pages)?x.prefs.pages.filter(p=>[41,42,43,44,45].includes(p)):[41,42,43,44,45];state.prefs.limit=["all","10","20"].includes(x.prefs.limit)?x.prefs.limit:"all";state.prefs.shuffle=!!x.prefs.shuffle;state.prefs.style=x.prefs.style==="write"?"write":"sort"}const s=x.session;if(s&&Array.isArray(s.ids)&&s.ids.length&&new Set(s.ids).size===s.ids.length&&s.ids.every(id=>BY_ID.has(id))&&Number.isInteger(s.index)&&s.index>=0&&s.index<=s.ids.length&&Array.isArray(s.history)&&s.history.length===s.index&&s.history.every((h,i)=>h&&h.id===s.ids[i]&&["good","again"].includes(h.status)&&(!h.previous||validRecord(h.previous))))state.session={ids:s.ids,index:s.index,history:s.history,mode:s.mode==="review"?"review":"normal",style:s.style==="write"?"write":"sort"}}catch(e){state=defaultState()}}
+function save(){let ok=true;try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){ok=false}$("storageWarning").hidden=ok;$("saveNote").textContent=ok?"きろくは このブラウザーに 自動で保存されます。":"今は きろくを保存できません。"}
+function showScreen(name){
+ const changed=$(name).hidden;
+ resetInput();invalidateAuto();
+ ["home","study","results"].forEach(id=>$(id).hidden=id!==name);
+ document.body.setAttribute("data-view",name);
+ if($("studyOptions").open)$("studyOptions").close();
+ if($("candidateDialog").open)$("candidateDialog").close();
+ if(changed)window.scrollTo({top:0,behavior:"instant"});
+ syncFocusUI();
+}
+function contextNode(text){const f=document.createDocumentFragment();let pos=0;for(const m of text.matchAll(/\{([^|{}]+)\|([^{}]+)\}/g)){f.append(document.createTextNode(text.slice(pos,m.index)));const ruby=document.createElement("ruby"),rt=document.createElement("rt");ruby.append(document.createTextNode(m[1]));rt.textContent=m[2];ruby.append(rt);f.append(ruby);pos=m.index+m[0].length}f.append(document.createTextNode(text.slice(pos)));return f}
+function plain(text){return text.replace(/\{([^|{}]+)\|[^{}]+\}/g,"$1")}
+function locationText(q){return `${q.page} の ${q.group===1?"①":"②"} − ${q.n}`}
+function reviewIds(){return QUESTIONS.filter(q=>state.records[q.id]?.status==="again").map(q=>q.id)}
+function renderHome(){showScreen("home");const good=Object.values(state.records).filter(r=>r.status==="good").length,again=reviewIds().length;$("masteredCount").textContent=good;$("reviewCount").textContent=again;$("newCount").textContent=100-good-again;$("homeReview").disabled=!again;$("homeReview").textContent=again?`「ふごうかく」${again}もんだけ れんしゅう →`:"「ふごうかく」は まだ ないよ";const s=state.session;$("resumeBox").hidden=!s;if(s){$("resumeInfo").textContent=s.index===s.ids.length?`${s.ids.length}もんの けっかが のこっているよ。`:`${s.ids.length}もんのうち ${s.index}もん おわったよ。`;$("resumeBtn").textContent=s.index===s.ids.length?"けっかを 見る →":"つづきを やる →"}updateSelection(false)}
+function updateSelection(persist=true){state.prefs.pages=[...document.querySelectorAll(".range input:checked")].map(e=>Number(e.value));state.prefs.limit=$("limit").value;state.prefs.shuffle=$("shuffle").checked;const total=state.prefs.pages.length*20,count=state.prefs.limit==="all"?total:Math.min(Number(state.prefs.limit),total);$("startBtn").disabled=!total;$("startBtn").textContent=total?`${count}もんを はじめる →`:"れんしゅうする ところを えらんでね";$("selectionInfo").textContent=total?`えらんだ ${total}もんから ${count}もん。１もんずつ じっくり やろう。`:"41〜45の どれかを えらんでね。";if(persist)save()}
+function mixed(ids){const a=[...ids];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function confirmAction(title,message,button,fn){$("dialogTitle").textContent=title;$("dialogMessage").textContent=message;$("confirmAction").textContent=button;dialogCallback=fn;$("confirmDialog").showModal();$("cancelDialog").focus()}
+function askStart(fn){const s=state.session;if(s&&s.index<s.ids.length)confirmAction("新しく はじめる？","今のつづきは消えます。これまでの「書ける」「ふごうかく」のきろくは のこります。","新しく はじめる",fn);else fn()}
+function start(ids,mode,style=state.prefs.style){if(!ids.length)return;state.session={ids:[...ids],index:0,history:[],mode,style};save();renderQuestion()}
+function startNormal(){let ids=QUESTIONS.filter(q=>state.prefs.pages.includes(q.page)).map(q=>q.id);if(state.prefs.shuffle)ids=mixed(ids);else if(state.prefs.limit!=="all")ids.sort((a,b)=>(state.records[a]?.attempts||0)-(state.records[b]?.attempts||0));if(state.prefs.limit!=="all")ids=ids.slice(0,Number(state.prefs.limit));askStart(()=>start(ids,"normal"))}
+function currentQuestion(){const s=state.session;return s?BY_ID.get(s.ids[s.index]):null}
+function renderQuestion(){const s=state.session;if(!s){renderHome();return}if(s.index>=s.ids.length){renderResults();return}showScreen("study");visibleAnswer=false;gradeLocked=false;answerUnknown=false;const q=currentQuestion();resetOnlineQuestion();$("progressText").textContent=`${s.index+1} / ${s.ids.length} もん`;$("progress").max=s.ids.length;$("progress").value=s.index;$("qLocation").textContent=locationText(q);$("modeBadge").textContent=s.mode==="review"?"ふごうかく れんしゅう":"書けるかな？";const reading=document.createElement("span");reading.className="reading";reading.textContent=q.reading;$("sentence").replaceChildren(contextNode(q.before),reading,contextNode(q.after));$("answer").textContent="";$("answerArea").hidden=true;$("gradeActions").hidden=true;$("gradeHint").hidden=true;$("revealActions").hidden=false;$("goodBtn").disabled=false;$("againBtn").disabled=false;$("backBtn").disabled=s.index===0;const good=s.history.filter(h=>h.status==="good").length;$("sessionStats").textContent=`書ける ${good} ・ ふごうかく ${s.index-good}`;clearDrawing();syncStudyMode();requestAnimationFrame(resizeCanvas);$("studyTitle").focus({preventScroll:true})}
+function isWriting(){return state.session?.style==="write"}
+function syncModeButtons(){
+ const choices=[["homeSortMode",state.prefs.style!=="write","見てしわけ"],["homeWriteMode",state.prefs.style==="write","書いて練習"],["studySortMode",!isWriting(),"見てしわけ"],["studyWriteMode",isWriting(),"書いて練習"]];
+ for(const [id,selected,label] of choices){
+  const button=$(id);button.setAttribute("aria-pressed",String(selected));
+  button.setAttribute("style",selected?"background:#146b63!important;color:#fff!important;border:3px solid #146b63!important;box-shadow:0 3px 0 #0b4943":"background:#fff!important;color:#243a48!important;border:3px solid #d4dfd9!important;box-shadow:none");
+  button.textContent=(selected?"✓ ":"")+label;
+ }
+ $("homeModeSummary").textContent=state.prefs.style==="write"?"書いて練習 を選んでいます":"見てしわけ を選んでいます";
+}
+function chooseHomeMode(style){state.prefs.style=style;syncModeButtons();save()}
+function chooseStudyMode(style){if(!currentQuestion())return;resetInput();invalidateAuto();state.session.style=style;save();syncStudyMode();requestAnimationFrame(resizeCanvas)}
+function syncStudyMode(){
+ const writing=isWriting();syncModeButtons();
+ $("writingPanel").hidden=!writing;$("sortNote").hidden=writing;
+ $("questionInstruction").textContent=writing?"色のついたひらがなを、漢字で書こう。":"色のついたひらがな、漢字で書けるかな？";
+ $("gradeActions").hidden=writing&&!visibleAnswer;$("gradeHint").hidden=writing&&!visibleAnswer;
+ $("revealActions").hidden=visibleAnswer;$("unknownBtn").hidden=!writing;
+ $("revealBtn").className=writing?"primary":"text-btn";
+ $("revealBtn").textContent=writing?"こたえを 見る":"こたえを たしかめたいときは ここ";
+ $("goodBtn").textContent=writing?"○ 書けた！":"○ 書ける！";
+ $("againBtn").textContent=writing?"△ ふごうかく":"△ まだ書けない";
+ $("goodBtn").disabled=answerUnknown;
+ $("gradeHint").textContent=writing?"見ないで書けたら「書けた！」。まだなら「ふごうかく」。":"どちらかを おすと、つぎの文に すすむよ。まよったら「まだ書けない」で OK。";
+ if(answerUnknown)$("gradeHint").textContent="「ふごうかく」か「まだ書けない」をおすと、あとで また れんしゅうできるよ。";
+ if(visibleAnswer)$("answerHint").textContent=writing?"字と送りがなを くらべてみよう。":"思いうかべた漢字と くらべよう。見ないでも書けそうかな？";
+ syncFocusUI();
+}
+function reveal(){return showInlineAnswer()}
+function grade(status,selfDecision=true){
+ const s=state.session,q=currentQuestion();if(!s||!q||gradeLocked)return;gradeLocked=true;
+ const previous=state.records[q.id]?{...state.records[q.id]}:null;
+ s.history.push({id:q.id,status,previous,style:s.style});
+ const advice=online.result?.id===q.id&&online.result?.revision===online.revision?online.result:null;
+ state.records[q.id]={status,style:s.style,assessment:"learner-choice-v9",adviceViewed:!!advice,nextGoal:advice?.reports.map(r=>r.text)||[],attempts:(previous?.attempts||0)+1};
+ s.index++;save();renderQuestion();
+}
+function goBack(){const s=state.session;if(!s||!s.history.length)return;const h=s.history.pop();s.index--;if(h.previous)state.records[h.id]=h.previous;else delete state.records[h.id];save();renderQuestion()}
+function renderResults(){const s=state.session;if(!s){renderHome();return}showScreen("results");const missed=s.history.filter(h=>h.status==="again").map(h=>h.id),good=s.ids.length-missed.length;$("resultTotal").textContent=s.ids.length;$("resultGood").textContent=good;$("resultAgain").textContent=missed.length;$("resultTitle").textContent=missed.length?"よく がんばったね！":"ぜんぶ「書ける」になったね！";$("resultMessage").textContent=missed.length?"「ふごうかく」は、これから書けるようになる漢字だよ。":"つぎは紙や画面に書いて、たしかめてみてもいいね。";$("retryBtn").hidden=!missed.length;$("retryWriteBtn").hidden=!missed.length;$("retryWriteBtn").textContent=`✎ ${missed.length}もんだけ 書いてれんしゅう →`;$("retryBtn").textContent=`△ ${missed.length}もんだけ 見てしわける →`;$("missedDetails").hidden=!missed.length;$("missedDetails").open=false;$("missedSummary").textContent=`ふごうかくの漢字を たしかめる（${missed.length}もん・こたえあり）`;$("missedList").replaceChildren();for(const id of missed){const q=BY_ID.get(id),li=document.createElement("li"),left=document.createElement("div"),strong=document.createElement("strong"),small=document.createElement("small"),tag=document.createElement("span");strong.textContent=q.answer;small.textContent=`${locationText(q)} ｜ ${plain(q.before)}${q.answer}${plain(q.after)}`;tag.className="retry-label";tag.textContent=q.reading;left.append(strong,small);li.append(left,tag);$("missedList").append(li)}$("resultTitle").focus({preventScroll:true})}
+const canvas=$("canvas"),ctx=canvas.getContext("2d");let strokes=[],activeStroke=null,activePointer=null,canvasWidth=800,canvasHeight=180,resizePending=false;
+const canvasTouches=new Set();
+function resizeCanvas(){if($("study").hidden||$("writingPanel").hidden||!ctx)return;if(activePointer!==null){resizePending=true;return}resizePending=false;const r=canvas.getBoundingClientRect();if(!r.width)return;canvasWidth=r.width;canvasHeight=r.height;const dpr=window.devicePixelRatio||1;canvas.width=Math.round(canvasWidth*dpr);canvas.height=Math.round(canvasHeight*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);draw()}
+function draw(){
+ if(!ctx)return;
+ ctx.clearRect(0,0,canvasWidth,canvasHeight);
+ const w=canvasWidth/4,n=Array.from(currentQuestion()?.answer||"").length;
+ ctx.fillStyle="#f3f5f3";if(n<4)ctx.fillRect(w*n,0,w*(4-n),canvasHeight);
+ ctx.strokeStyle="#b4c7bc";ctx.lineWidth=1;ctx.setLineDash([]);
+ for(let i=1;i<4;i++){ctx.beginPath();ctx.moveTo(w*i,0);ctx.lineTo(w*i,canvasHeight);ctx.stroke()}
+ ctx.setLineDash([4,5]);ctx.strokeStyle="#dce5df";
+ for(let i=0;i<4;i++){ctx.beginPath();ctx.moveTo(w*(i+.5),0);ctx.lineTo(w*(i+.5),canvasHeight);ctx.stroke()}
+ ctx.beginPath();ctx.moveTo(0,canvasHeight/2);ctx.lineTo(canvasWidth,canvasHeight/2);ctx.stroke();ctx.setLineDash([]);
+ ctx.strokeStyle="#243a48";ctx.fillStyle="#243a48";ctx.lineWidth=3.5;ctx.lineCap="round";ctx.lineJoin="round";
+ online.chars.forEach((lines,i)=>{
+  for(const line of lines){
+   if(!line.length)continue;ctx.beginPath();
+   if(line.length===1){ctx.arc((i+line[0].x)*w,line[0].y*canvasHeight,1.75,0,Math.PI*2);ctx.fill();continue}
+   ctx.moveTo((i+line[0].x)*w,line[0].y*canvasHeight);
+   for(const p of line.slice(1))ctx.lineTo((i+p.x)*w,p.y*canvasHeight);ctx.stroke();
+  }
+ });
+ $("undoStroke").disabled=!online.timeline.length;$("clearCanvas").disabled=!online.chars.some(lines=>lines.length);
+}
+function point(e){const r=canvas.getBoundingClientRect();return{x:Math.max(0,Math.min(1,(e.clientX-r.left)/r.width*4-online.slot)),y:Math.max(0,Math.min(1,(e.clientY-r.top)/r.height))}}
+const activeTouchOptions={passive:false,capture:true};
+function blockDefault(e){if(e.cancelable!==false)e.preventDefault()}
+function canDraw(){return !$("study").hidden&&!$("writingPanel").hidden&&!!ctx}
+function clearSelection(){try{window.getSelection()?.removeAllRanges()}catch(e){}}
+function finishStroke(){
+ const oldPointer=activePointer;activePointer=null;activeStroke=null;
+ try{if(typeof oldPointer==="number"&&canvas.hasPointerCapture?.(oldPointer))canvas.releasePointerCapture(oldPointer)}catch(e){}
+ if(resizePending)resizeCanvas();
+ if(online.chars.length)renderSlots();
+}
+function resetInput(){canvasTouches.clear();finishStroke()}
+function clearDrawing(){resetInput();online.chars=Array.from({length:4},()=>[]);online.timeline=[];online.slot=0;strokes=online.chars[0];invalidateAuto();renderSlots();draw()}
+function beginStroke(id,e){
+ if(!canDraw()||activePointer!==null)return;
+ resizeCanvas();clearSelection();invalidateAuto();$("study").setAttribute("data-inking","true");
+ const r=canvas.getBoundingClientRect();
+ online.slot=Math.max(0,Math.min(3,Math.floor((e.clientX-r.left)/r.width*4)));
+ strokes=online.chars[online.slot];activePointer=id;activeStroke=[point(e)];
+ strokes.push(activeStroke);online.timeline.push({slot:online.slot,line:activeStroke});draw();
+}
+function moveStroke(e){if(!activeStroke)return;activeStroke.push(point(e));draw()}
+function pointerDown(e){
+ if(!canDraw()||e.button!==0)return;
+ blockDefault(e);
+ if(activePointer!==null)return;
+ beginStroke(e.pointerId,e);
+ try{canvas.setPointerCapture(e.pointerId)}catch(err){}
+}
+function pointerMove(e){if(e.pointerId!==activePointer||!activeStroke)return;blockDefault(e);moveStroke(e)}
+function endStroke(e){if(e.pointerId!==activePointer)return;blockDefault(e);finishStroke()}
+canvas.addEventListener("pointerdown",pointerDown,{passive:false});
+canvas.addEventListener("pointermove",pointerMove,{passive:false});
+canvas.addEventListener("pointerup",endStroke,{passive:false});
+canvas.addEventListener("pointercancel",endStroke,{passive:false});
+canvas.addEventListener("lostpointercapture",endStroke);
+window.addEventListener("pointermove",e=>{if(e.target!==canvas)pointerMove(e)},{passive:false});
+window.addEventListener("pointerup",endStroke,{passive:false});
+window.addEventListener("pointercancel",endStroke,{passive:false});
+canvas.addEventListener("touchstart",e=>{
+ if(!canDraw())return;blockDefault(e);clearSelection();
+ for(const t of Array.from(e.changedTouches||[]))canvasTouches.add(t.identifier);
+ if(!window.PointerEvent&&activePointer===null){const t=e.changedTouches?.[0];if(t)beginStroke("touch:"+t.identifier,t)}
+},activeTouchOptions);
+canvas.addEventListener("touchmove",e=>{
+ if(!canDraw())return;blockDefault(e);
+ if(!window.PointerEvent){const t=Array.from(e.changedTouches||[]).find(t=>"touch:"+t.identifier===activePointer);if(t)moveStroke(t)}
+},activeTouchOptions);
+function touchEnd(e){
+ let tracked=false;
+ for(const t of Array.from(e.changedTouches||[])){
+  if(canvasTouches.delete(t.identifier))tracked=true;
+  if(activePointer==="touch:"+t.identifier)finishStroke();
+ }
+ if(tracked)blockDefault(e);
+ if(e.touches?.length===0){canvasTouches.clear();if(activePointer!==null)finishStroke()}
+}
+window.addEventListener("touchend",touchEnd,activeTouchOptions);
+window.addEventListener("touchcancel",touchEnd,activeTouchOptions);
+window.addEventListener("touchmove",e=>{
+ if(canDraw()&&(canvasTouches.size>0||activePointer!==null))blockDefault(e);
+},activeTouchOptions);
+for(const name of ["gesturestart","gesturechange","gestureend"])canvas.addEventListener(name,blockDefault,activeTouchOptions);
+for(const name of ["selectstart","dragstart","contextmenu"])$("study").addEventListener(name,blockDefault);
+window.addEventListener("blur",resetInput);
+window.addEventListener("pagehide",resetInput);
+document.addEventListener("visibilitychange",()=>{if(document.hidden)resetInput()});
+window.addEventListener("orientationchange",()=>{resetInput();requestAnimationFrame(resizeCanvas)});
+if("ResizeObserver" in window)new ResizeObserver(resizeCanvas).observe(canvas);else window.addEventListener("resize",resizeCanvas);
+$("undoStroke").onclick=()=>{resetInput();const last=online.timeline.pop();if(last){const lines=online.chars[last.slot];const i=lines.indexOf(last.line);if(i>=0)lines.splice(i,1)}strokes=online.chars[online.slot];invalidateAuto();renderSlots();draw()};$("clearCanvas").onclick=clearDrawing;$("revealBtn").onclick=()=>reveal();$("unknownBtn").onclick=()=>reveal(true);$("goodBtn").onclick=e=>{if(!e||e.detail<2)chooseAfterCheck("good")};$("againBtn").onclick=e=>{if(!e||e.detail<2)chooseAfterCheck("again")};$("backBtn").onclick=goBack;$("resultBack").onclick=goBack;$("pauseBtn").onclick=()=>{save();renderHome()};$("startBtn").onclick=startNormal;
+$("resumeBtn").onclick=()=>{state.session?.index===state.session?.ids.length?renderResults():renderQuestion()};$("homeReview").onclick=()=>askStart(()=>start(state.prefs.shuffle?mixed(reviewIds()):reviewIds(),"review"));function retryWithStyle(style){const ids=state.session.history.filter(h=>h.status==="again").map(h=>h.id);start(state.prefs.shuffle?mixed(ids):ids,"review",style)}$("retryBtn").onclick=()=>retryWithStyle("sort");$("retryWriteBtn").onclick=()=>retryWithStyle("write");$("homeBtn").onclick=()=>{state.session=null;save();renderHome()};
+$("resetBtn").onclick=()=>confirmAction("きろくを ぜんぶ消す？","「書ける」「ふごうかく」と、とちゅうのきろくが消えます。もとには もどせません。","ぜんぶ消す",()=>{state=defaultState();save();applyPreferences();renderHome()});$("cancelDialog").onclick=()=>{$("confirmDialog").close();dialogCallback=null};$("confirmDialog").addEventListener("cancel",()=>{dialogCallback=null});$("confirmAction").onclick=()=>{const fn=dialogCallback;dialogCallback=null;$("confirmDialog").close();if(fn)fn()};$("selectAll").onclick=()=>{document.querySelectorAll(".range input").forEach(e=>e.checked=true);updateSelection()};
+function applyPreferences(){document.querySelectorAll(".range input").forEach(e=>e.checked=state.prefs.pages.includes(Number(e.value)));$("limit").value=state.prefs.limit;$("shuffle").checked=state.prefs.shuffle;syncModeButtons()}
+for(const page of [41,42,43,44,45]){const label=document.createElement("label");label.className="range";const input=document.createElement("input");input.type="checkbox";input.value=page;input.setAttribute("aria-label",`${page}・20もん`);const span=document.createElement("span"),b=document.createElement("b"),small=document.createElement("small");b.textContent=page;small.textContent="20もん";span.append(b,small);label.append(input,span);$("ranges").append(label);input.addEventListener("change",()=>updateSelection())}
+$("homeSortMode").onclick=()=>chooseHomeMode("sort");$("homeWriteMode").onclick=()=>chooseHomeMode("write");$("studySortMode").onclick=()=>chooseStudyMode("sort");$("studyWriteMode").onclick=()=>chooseStudyMode("write");
+const online={phase:"manual",revision:0,job:0,checking:false,chars:[],slot:0,timeline:[],result:null,glyphs:new Map(),strokeTemplates:new Map(),glyphPhase:"idle",logs:[]};
+const SVG_BASES=["https://cdn.jsdelivr.net/gh/KanjiVG/kanjivg@master/kanji/","https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/"];
+function diagnostic(message){online.logs.push(message);$("onlineLog").textContent=online.logs.slice(-8).join("\n")}
+function updateOnlineStatus(){
+ $("engineStatus").textContent="自分で判定するモード";$("engineStatus").className="asset-status ready";
+ $("networkHint").textContent="通信はお手本を開くときだけ。文字認識エンジンは使いません。";
+ $("focusConnection").textContent="ごうかく・もう一度は自分で選べます。お手本とアドバイスには通信が必要です。";
+ $("autoCheckBtn").disabled=false;$("autoCheckBtn").textContent="アドバイス";
+ $("retryOnline").disabled=online.checking;
+}
+function resetOnlineQuestion(){
+ answerRequest++;visibleAnswer=false;$("answerArea").hidden=true;$("modelGlyphs").replaceChildren();
+ online.job++;online.revision++;online.chars=Array.from({length:4},()=>[]);online.timeline=[];online.slot=0;online.result=null;online.checking=false;
+ strokes=online.chars[0];$("study").setAttribute("data-inking","false");$("autoResult").hidden=true;renderSlots();updateOnlineStatus();
+}
+function renderSlots(){const n=Array.from(currentQuestion()?.answer||"").length;$("slotCaption").textContent=n?n+"文字":""}
+function invalidateAuto(){online.revision++;online.job++;online.result=null;online.checking=false;$("autoResult").hidden=true;if($("strictDialog").open)$("strictDialog").close();syncFocusUI()}
+function syncFocusUI(){
+ const writing=isWriting();$("study").setAttribute("data-mode",writing?"write":"sort");$("study").setAttribute("data-phase","write");
+ $("revealActions").hidden=false;$("autoCheckBtn").hidden=false;$("autoCheckBtn").disabled=false;$("autoCheckBtn").textContent="アドバイス";
+ $("revealBtn").hidden=false;$("revealBtn").textContent=visibleAnswer?"答えをかくす":"答えをかくにん";$("revealBtn").setAttribute("aria-expanded",String(visibleAnswer));$("unknownBtn").hidden=true;$("writeAgainBtn").hidden=true;$("autoConfirmBar").hidden=true;
+ $("gradeActions").hidden=false;$("goodBtn").disabled=false;$("goodBtn").textContent="ごうかく →";$("againBtn").textContent="ふごうかく →";
+ $("gradeHint").hidden=true;$("reviewChoiceNote").hidden=true;$("manualChoiceBtn").hidden=true;$("strictDetailsBtn").hidden=true;$("candidateAdjust").hidden=true;
+ $("idlePrompt").hidden=false;$("idlePrompt").textContent=writing?"書けたら、自分でえらぼう。":"書けるかな？ 自分でえらぼう。";
+ $("focusSaveWarning").hidden=$("storageWarning").hidden;const q=currentQuestion();$("focusQuestionInfo").textContent=q?locationText(q):"";
+}
+function chooseAfterCheck(status){if(!currentQuestion())return;if($("strictDialog").open)$("strictDialog").close();grade(status,true)}
+function backToWriting(){resetInput();clearDrawing();syncFocusUI()}
+async function fetchSVG(url){const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),7000);try{const r=await fetch(url,{signal:controller.signal,credentials:"omit",referrerPolicy:"no-referrer"});if(!r.ok)throw Error("HTTP "+r.status);return await r.text()}finally{clearTimeout(timer)}}
+function sanitizeGlyph(text){
+ const xml=new DOMParser().parseFromString(text,"image/svg+xml");if(xml.querySelector("parsererror"))throw Error("SVG error");
+ const nodes=[...xml.querySelectorAll("path")].filter(p=>/-s\d+$/.test(p.getAttribute("id")||""));
+ nodes.sort((a,b)=>Number(a.getAttribute("id").match(/-s(\d+)$/)[1])-Number(b.getAttribute("id").match(/-s(\d+)$/)[1]));
+ if(!nodes.length||nodes.some((p,i)=>Number(p.getAttribute("id").match(/-s(\d+)$/)[1])!==i+1))throw Error("stroke data");
+ const paths=nodes.map(p=>p.getAttribute("d"));if(paths.some(d=>!d||!/^[MmZzLlHhVvCcSsQqTtAaEe0-9.,+\s-]+$/.test(d)))throw Error("path data");
+ const index=new Map(nodes.map((p,i)=>[p.getAttribute("id"),i]));paths.components=[];
+ for(const g of xml.querySelectorAll("g")){const element=g.getAttributeNS("http://kanjivg.tagaini.net","element")||g.getAttribute("kvg:element");if(!["田","由","甲","申"].includes(element))continue;const indices=[...g.querySelectorAll("path")].map(p=>index.get(p.getAttribute("id"))).filter(i=>i!==undefined);if(indices.length)paths.components.push({element,indices})}
+ return paths;
+}
+function buildStrokeTemplate(char,paths){try{
+ const lines=paths.map(d=>{const p=document.createElementNS("http://www.w3.org/2000/svg","path");p.setAttribute("d",d);const length=p.getTotalLength();if(!Number.isFinite(length)||length<=0)throw Error("length");return Array.from({length:49},(_,i)=>{const q=p.getPointAtLength(length*i/48);return{x:q.x/109,y:q.y/109}})});
+ online.strokeTemplates.set(char,{lines,paths,components:paths.components||[]});return true;
+ }catch(e){return false}}
+const pendingGlyphs=new Map();
+async function loadGlyph(char){
+ if(online.glyphs.has(char)){if(!online.strokeTemplates.has(char))buildStrokeTemplate(char,online.glyphs.get(char));return true}
+ if(pendingGlyphs.has(char))return pendingGlyphs.get(char);
+ const promise=(async()=>{for(const base of SVG_BASES){try{const paths=sanitizeGlyph(await fetchSVG(base+char.codePointAt(0).toString(16).padStart(5,"0")+".svg"));online.glyphs.set(char,paths);buildStrokeTemplate(char,paths);return true}catch(e){}}return false})();
+ pendingGlyphs.set(char,promise);try{return await promise}finally{pendingGlyphs.delete(char)}
+}
+function lineLength(l){let n=0;for(let i=1;i<l.length;i++)n+=Math.hypot(l[i].x-l[i-1].x,l[i].y-l[i-1].y);return n}
+function sampleArc(line,n=24){if(!line.length)return[];const sum=lineLength(line);if(sum<1e-7)return Array.from({length:n},()=>({...line[0]}));const cum=[0];for(let i=1;i<line.length;i++)cum.push(cum[i-1]+Math.hypot(line[i].x-line[i-1].x,line[i].y-line[i-1].y));let j=1;return Array.from({length:n},(_,k)=>{const d=sum*k/(n-1);while(j<line.length-1&&cum[j]<d)j++;const a=line[j-1],b=line[j],t=(d-cum[j-1])/(cum[j]-cum[j-1]||1);return{x:a.x+(b.x-a.x)*t,y:a.y+(b.y-a.y)*t}})}
+function inkBounds(lines){const p=lines.flat();if(!p.length)return null;return{left:Math.min(...p.map(v=>v.x)),right:Math.max(...p.map(v=>v.x)),top:Math.min(...p.map(v=>v.y)),bottom:Math.max(...p.map(v=>v.y))}}
+function normalizeInk(lines){const b=inkBounds(lines);if(!b)return[];const scale=Math.max(b.right-b.left,b.bottom-b.top,.001),cx=(b.left+b.right)/2,cy=(b.top+b.bottom)/2;return lines.map(l=>l.map(p=>({x:(p.x-cx)/scale+.5,y:(p.y-cy)/scale+.5})))}
+function dpt(a,b){return Math.hypot(a.x-b.x,a.y-b.y)}
+function pathCost(a,b){const direct=a.reduce((s,p,i)=>s+dpt(p,b[i]),0)/a.length,reverse=a.reduce((s,p,i)=>s+dpt(p,b[b.length-1-i]),0)/a.length;return{cost:Math.min(direct,reverse),reverse:reverse+.04<direct}}
+function assignStrokes(cost){const n=cost.length,u=Array(n+1).fill(0),v=Array(n+1).fill(0),p=Array(n+1).fill(0),way=Array(n+1).fill(0);for(let i=1;i<=n;i++){p[0]=i;let j0=0;const min=Array(n+1).fill(Infinity),used=Array(n+1).fill(false);do{used[j0]=true;const i0=p[j0];let delta=Infinity,j1=0;for(let j=1;j<=n;j++)if(!used[j]){const cur=cost[i0-1][j-1]-u[i0]-v[j];if(cur<min[j]){min[j]=cur;way[j]=j0}if(min[j]<delta){delta=min[j];j1=j}}for(let j=0;j<=n;j++){if(used[j]){u[p[j]]+=delta;v[j]-=delta}else min[j]-=delta}j0=j1}while(p[j0]!==0);do{const j1=way[j0];p[j0]=p[j1];j0=j1}while(j0)}const result=Array(n);for(let j=1;j<=n;j++)result[p[j]-1]=j-1;return result}
+function directionWord(dx,dy){return Math.abs(dx)>Math.abs(dy)?(dx>0?"右":"左"):(dy>0?"下":"上")}
+function adviceReport(lines,char,template){
+ const base={char,lines,reference:template?.lines||[],text:"",focus:null,kind:"note",mapping:[]};
+ if(!template)return{...base,text:"お手本を読みこめなかったよ。もう一度開いてね。"};
+ if(!lines.length)return{...base,text:"お手本を見て、一画ずつ書いてみよう。"};
+ if(lines.some(l=>!l.length||l.some(p=>!Number.isFinite(p.x)||!Number.isFinite(p.y))))return{...base,text:"うまく記録できなかったよ。書きなおしてみよう。"};
+ const bound=inkBounds(lines);if(Math.max(bound.right-bound.left,bound.bottom-bound.top)<.15)return{...base,text:"つぎは、わくに大きく書いてみよう。"};
+ if(lines.length!==template.lines.length)return{...base,kind:"count",text:"お手本は"+template.lines.length+"画、書いた線は"+lines.length+"画。一本ずつ数えよう。"};
+ const u=normalizeInk(lines).map(l=>sampleArc(l)),r=normalizeInk(template.lines).map(l=>sampleArc(l));
+ const metrics=u.map(a=>r.map(b=>pathCost(a,b))),mapping=assignStrokes(metrics.map(row=>row.map(m=>m.cost)));base.mapping=mapping;
+ const reordered=Array(r.length);mapping.forEach((j,i)=>reordered[j]=lines[i]);
+ const family=[];const own=fieldFamilySignature(reordered);if(["田","由","甲","申"].includes(char))family.push({element:char,signature:own,indices:reordered.map((_,i)=>i)});
+ for(const c of template.components||[]){if(c.element===char&&c.indices.length===lines.length)continue;family.push({element:c.element,signature:fieldFamilySignature(c.indices.map(i=>reordered[i])),indices:c.indices})}
+ for(const f of family){const sig=f.signature;if(!sig.ok)continue;const wanted={"田":[false,false],"由":[true,false],"甲":[false,true],"申":[true,true]}[f.element];for(const [k,side] of [[0,"上"],[1,"下"]]){const value=k===0?sig.top:sig.bottom;const wrong=wanted[k]?value<.06:value>.08;
+ if(wrong){const ref=f.indices[sig.stroke-1],input=mapping.indexOf(ref),end=k===0?0:1;return{...base,kind:"point",text:f.element+"のたて線は、"+side+"に"+(wanted[k]?"出そう。":"出さずに止めよう。"),focus:{input,ref,end},mapping}}
+ }}
+ const ranked=mapping.map((j,i)=>({input:i,ref:j,...metrics[i][j]})).sort((a,b)=>b.cost-a.cost);
+ const worst=ranked[0];
+ if(worst&&worst.cost>.19){const a=u[worst.input],target=worst.reverse?[...r[worst.ref]].reverse():r[worst.ref];const ds=dpt(a[0],target[0]),de=dpt(a.at(-1),target.at(-1));
+ if(Math.max(ds,de)>.22){const end=de>=ds?1:0,idx=end?a.length-1:0;return{...base,kind:"point",text:(worst.ref+1)+"画目の"+(end?"終わり":"はじめ")+"を、もう少し"+directionWord(target[idx].x-a[idx].x,target[idx].y-a[idx].y)+"へ。",focus:{input:worst.input,ref:worst.ref,end,reverse:worst.reverse},mapping}}
+ return{...base,kind:"point",text:(worst.ref+1)+"画目の赤い線を、青い線とくらべよう。",focus:{input:worst.input,ref:worst.ref},mapping}}
+ const reverse=ranked.find(x=>x.reverse&&x.cost<.13);if(reverse)return{...base,kind:"direction",text:(reverse.ref+1)+"画目は、青い点から書こう。",focus:{input:reverse.input,ref:reverse.ref,end:1},mapping};
+ const order=mapping.findIndex((j,i)=>j!==i);if(order>=0&&ranked.every(x=>x.cost<.16))return{...base,kind:"order",text:"形は近いね。つぎは"+(order+1)+"画目を、番号の順に書こう。",focus:{input:mapping.indexOf(order),ref:order},mapping};
+ return{...base,kind:"encourage",text:"大きな形はお手本に近いね。自分の目でも見てみよう。",mapping};
+}
+function fieldFamilySignature(lines){
+ const norm=normalizeInk(lines),runs=[];
+ norm.forEach((line,stroke)=>{
+  const points=sampleArc(line,64);let run=null;
+  for(let i=1;i<points.length;i++){
+   const a=points[i-1],b=points[i],dx=b.x-a.x,dy=b.y-a.y;
+   const axis=Math.abs(dx)>Math.abs(dy)*2.4?"h":Math.abs(dy)>Math.abs(dx)*2.4?"v":"other";
+   if(axis==="other"){if(run)runs.push(run);run=null;continue}
+   if(!run||run.axis!==axis){if(run)runs.push(run);run={axis,stroke,points:[a,b]}}else run.points.push(b);
+  }
+  if(run)runs.push(run);
+ });
+ const segments=runs.map(run=>({...run,box:inkBounds([run.points])}));
+ const horizontals=segments.filter(a=>a.axis==="h"&&a.box.right-a.box.left>.35);
+ if(horizontals.length<3)return{ok:false,message:"田・由の横線の位置を確認できません"};
+ const level=a=>(a.box.top+a.box.bottom)/2;
+ const top=horizontals.reduce((a,b)=>level(a)<level(b)?a:b),bottom=horizontals.reduce((a,b)=>level(a)>level(b)?a:b);
+ const left=Math.max(top.box.left,bottom.box.left),right=Math.min(top.box.right,bottom.box.right),center=(left+right)/2;
+ const verticals=segments.filter(a=>a.axis==="v"&&Math.abs((a.box.left+a.box.right)/2-center)<(right-left)*.22&&a.box.bottom-a.box.top>(level(bottom)-level(top))*.65);
+ if(verticals.length!==1)return{ok:false,message:"真ん中のたて線を確認できません"};
+ const v=verticals[0],height=level(bottom)-level(top);
+ if(height<.25)return{ok:false,message:"外わくを大きく書いてね"};
+ return{ok:true,top:(level(top)-v.box.top)/height,bottom:(v.box.bottom-level(bottom))/height,stroke:v.stroke+1};
+}
+function addInk(svg,lines,color,width=2.3){const ns="http://www.w3.org/2000/svg";for(const line of lines){if(!line?.length)continue;const p=document.createElementNS(ns,"path");p.setAttribute("d",line.map((q,j)=>(j?"L":"M")+(q.x*100+4.5)+","+(q.y*100+4.5)).join(" "));p.setAttribute("fill","none");p.setAttribute("stroke",color);p.setAttribute("stroke-width",width);p.setAttribute("stroke-linecap","round");p.setAttribute("stroke-linejoin","round");svg.append(p)}}
+function adviceDiagram(lines,focus,index,isModel){
+ const ns="http://www.w3.org/2000/svg",svg=document.createElementNS(ns,"svg");svg.setAttribute("viewBox","0 0 109 109");svg.setAttribute("role","img");svg.setAttribute("aria-label",isModel?"お手本。青い線に注目":"自分の字。赤い線に注目");addInk(svg,lines,"#56665d");
+ const selected=lines[index];if(focus&&selected){const color=isModel?"#1769bd":"#ce4228";addInk(svg,[selected],color,3.5);const end=focus.end;const p=end===0?selected[0]:end===1?selected.at(-1):selected[Math.floor(selected.length/2)];const c=document.createElementNS(ns,"circle");c.setAttribute("cx",p.x*100+4.5);c.setAttribute("cy",p.y*100+4.5);c.setAttribute("r","5");c.setAttribute("fill","none");c.setAttribute("stroke",color);c.setAttribute("stroke-width","1.5");svg.append(c);
+ const label=document.createElementNS(ns,"text");label.setAttribute("x",Math.max(5,Math.min(80,p.x*100-2)));label.setAttribute("y",Math.max(11,Math.min(102,p.y*100-4)));label.setAttribute("fill",color);label.setAttribute("font-size","9");label.setAttribute("font-weight","bold");label.textContent="ここ！";svg.append(label)}
+ return svg;
+}
+function showAdvicePanels(reports,snapshot,chars){
+ $("strictContents").replaceChildren();
+ reports.forEach((report,i)=>{
+ const section=document.createElement("section");section.className="strict-character";const h=document.createElement("h3");h.textContent=(i+1)+"字目「"+chars[i]+"」";section.append(h);
+ const tip=document.createElement("p");tip.className="next-goal";tip.textContent=report.text;section.append(tip);
+ const grids=document.createElement("div");grids.className="strict-diagrams";
+ for(const model of [false,true]){const box=document.createElement("div"),caption=document.createElement("p");caption.textContent=model?"お手本（青）":"自分の字（赤）";box.append(caption);const lines=model?report.reference:snapshot[i];if(lines.length)box.append(adviceDiagram(lines,report.focus,model?report.focus?.ref:report.focus?.input,model));else{const p=document.createElement("p");p.textContent=model?"お手本の取得ができませんでした":"まだ書いていないよ";box.append(p)}grids.append(box)}
+ section.append(grids);
+ if(report.reference.length){const details=document.createElement("details"),summary=document.createElement("summary");summary.textContent="書き順を見る";details.append(summary);const step=document.createElement("div");step.className="stroke-stepper";const caption=document.createElement("p"),stage=document.createElementNS("http://www.w3.org/2000/svg","svg"),controls=document.createElement("div"),prev=document.createElement("button"),next=document.createElement("button");stage.setAttribute("viewBox","0 0 109 109");prev.textContent="← 前";next.textContent="次 →";let n=0;
+ function render(){stage.replaceChildren();addInk(stage,report.reference,"#dee4df");addInk(stage,report.reference.slice(0,n),"#56665d");addInk(stage,[report.reference[n]],"#1769bd",3);const line=sampleArc(report.reference[n],12),start=document.createElementNS("http://www.w3.org/2000/svg","circle");start.setAttribute("cx",line[0].x*100+4.5);start.setAttribute("cy",line[0].y*100+4.5);start.setAttribute("r","2.6");start.setAttribute("fill","#1769bd");stage.append(start);for(const j of [3,7,10]){const p=line[j],a=line[j-1],angle=Math.atan2(p.y-a.y,p.x-a.x),x=p.x*100+4.5,y=p.y*100+4.5;const arrow=document.createElementNS("http://www.w3.org/2000/svg","path");arrow.setAttribute("d","M"+(x-3*Math.cos(angle-.6))+","+(y-3*Math.sin(angle-.6))+"L"+x+","+y+"L"+(x-3*Math.cos(angle+.6))+","+(y-3*Math.sin(angle+.6)));arrow.setAttribute("stroke","#1769bd");arrow.setAttribute("fill","none");stage.append(arrow)}caption.textContent=(n+1)+"画目 / "+report.reference.length+"画。青い点から。";prev.disabled=n===0;next.disabled=n===report.reference.length-1}
+ prev.onclick=()=>{if(n>0){n--;render()}};next.onclick=()=>{if(n<report.reference.length-1){n++;render()}};controls.append(prev,next);step.append(caption,stage,controls);details.append(step);section.append(details);render();}
+ $("strictContents").append(section);
+ });
+}
+async function openStrictDetails(){
+ const q=currentQuestion();if(!q)return;resetInput();const id=q.id,revision=online.revision,job=++online.job;
+ const chars=Array.from(q.answer),snapshot=online.chars.slice(0,chars.length).map(l=>l.map(s=>s.map(p=>({...p}))));
+ $("strictContents").replaceChildren();const loading=document.createElement("p");loading.textContent="お手本を読みこんでいるよ… 待たずに自分でえらんでもいいよ。";$("strictContents").append(loading);$("adviceAnswer").textContent="答え："+q.answer;$("adviceAnswer").hidden=false;
+ if(!$("strictDialog").open)$("strictDialog").showModal();$("closeStrict").focus({preventScroll:true});online.checking=true;
+ try{await Promise.all([...new Set(chars)].map(loadGlyph));if(online.job!==job||online.revision!==revision||currentQuestion()?.id!==id||!$("strictDialog").open)return;
+ const reports=chars.map((c,i)=>adviceReport(snapshot[i],c,online.strokeTemplates.get(c)));
+ const extra=online.chars.slice(chars.length).some(l=>l.length);if(extra){const p=document.createElement("p");p.textContent="あまったマスにも線があるよ。消したいときは「１つもどす」。";diagnostic(p.textContent)}
+ online.result={id,revision,reports,snapshot,extra};showAdvicePanels(reports,snapshot,chars);
+ const missing=chars.filter(c=>!online.glyphs.has(c));$("adviceAnswer").hidden=!missing.length;$("adviceAnswer").textContent=missing.length?"答え："+q.answer+"（字形を取得できないため端末の字体）":"";
+ }catch(e){if(online.job===job){$("strictContents").replaceChildren();const p=document.createElement("p");p.textContent="うまく確認できなかったよ。自分でえらんで進んでいいよ。";$("strictContents").append(p);diagnostic(e.message)}}finally{if(online.job===job)online.checking=false;updateOnlineStatus()}
+}
+$("autoCheckBtn").onclick=openStrictDetails;$("manualChoiceBtn").onclick=openStrictDetails;$("revealBtn").onclick=showInlineAnswer;
+$("strictDetailsBtn").onclick=openStrictDetails;
+$("commitAuto").onclick=()=>chooseAfterCheck("good");$("selfAgainBtn").onclick=()=>chooseAfterCheck("again");
+$("detailGoodBtn").onclick=()=>chooseAfterCheck("good");$("detailAgainBtn").onclick=()=>chooseAfterCheck("again");
+$("closeStrict").onclick=()=>{$("strictDialog").close();online.job++;online.checking=false;$("autoCheckBtn").focus({preventScroll:true})};
+$("strictDialog").addEventListener("cancel",()=>{online.job++;online.checking=false});
+$("writeAgainBtn").onclick=backToWriting;
+$("openOptions").onclick=()=>{resetInput();syncFocusUI();updateOnlineStatus();$("studyOptions").showModal()};$("closeOptions").onclick=()=>$("studyOptions").close();
+$("retryOnline").onclick=()=>{if(currentQuestion())openStrictDetails();else diagnostic("練習を始めて「アドバイス」を押してください。")};
+$("candidateAdjust").onclick=()=>{};$("closeCandidates").onclick=()=>$("candidateDialog").close();
+
+let answerRequest=0;
+function inlineGlyph(char){
+ const paths=online.glyphs.get(char);if(!paths)return null;
+ const ns="http://www.w3.org/2000/svg",svg=document.createElementNS(ns,"svg");svg.setAttribute("viewBox","0 0 109 109");svg.setAttribute("role","img");svg.setAttribute("aria-label",char);
+ for(const d of paths){const p=document.createElementNS(ns,"path");p.setAttribute("d",d);p.setAttribute("fill","none");p.setAttribute("stroke","#243a48");p.setAttribute("stroke-width","3.3");p.setAttribute("stroke-linecap","round");p.setAttribute("stroke-linejoin","round");svg.append(p)}return svg;
+}
+function paintInlineAnswer(q,loading=false){
+ $("answer").textContent=q.answer;$("modelGlyphs").replaceChildren();let missing=0;
+ for(const char of Array.from(q.answer)){const svg=inlineGlyph(char);if(svg)$("modelGlyphs").append(svg);else missing++}
+ $("answer").hidden=missing===0;$("glyphFallbackNote").hidden=missing===0;
+ $("glyphFallbackNote").textContent=missing?(loading?"お手本を読込中（今は端末の字体）":"お手本を取得できませんでした（端末の字体）"):"";
+}
+async function showInlineAnswer(){
+ const q=currentQuestion();if(!q||$("study").hidden)return;resetInput();
+ if(visibleAnswer){answerRequest++;visibleAnswer=false;$("answerArea").hidden=true;syncFocusUI();return}
+ visibleAnswer=true;const request=++answerRequest,id=q.id;
+ $("answerArea").hidden=false;paintInlineAnswer(q,true);syncFocusUI();
+ try{await Promise.all([...new Set(Array.from(q.answer))].map(loadGlyph))}catch(e){diagnostic("お手本を取得できませんでした")}
+ if(request!==answerRequest||!visibleAnswer||currentQuestion()?.id!==id||$("study").hidden)return;
+ paintInlineAnswer(q,false);
+}
+
+$("limit").onchange=()=>updateSelection();$("shuffle").onchange=()=>updateSelection();load();applyPreferences();save();renderHome();updateOnlineStatus();</script></body></html>
